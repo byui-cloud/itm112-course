@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://byui-cloud.github.io/itm112-course/sitemap.xml

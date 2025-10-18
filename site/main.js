@@ -13,7 +13,7 @@ itm112.strings = {
 	byuiHint    : 'BYU-Idaho Website',
 	byuiLogoAlt : 'BYU-Idaho Logo',
 	courseCode  : 'ITM 112',
-	courseTitle : 'Introduction to Cloud Computing',
+	courseTitle : 'Introduction to Linux',
 	courseHint  : 'ITM 112 Content',
 
 	newTabText  : 'New Tab',

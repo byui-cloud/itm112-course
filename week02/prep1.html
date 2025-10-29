@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Copyright © 2025, Brigham Young University–Idaho. All rights reserved. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Crimson+Pro&display=swap">
+    <link rel="stylesheet" href="../site/reset.css">
+    <link rel="stylesheet" href="../site/style.css">
+    <script defer src="../site/main.js"></script>
+    <title>Week 2 Prep Assignment</title>
+    <link rel="icon" type="image/png" href="../site/logo.png">
+    <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week01/prep1.html">
+    <meta name="description" content="Week 1 prep assignment instructions for the BYU-Idaho ITM 112 Introduction to Linux course">
+</head>
+<style>
+  /* optional: make it look like your current panels */
+  .dp-panels-wrapper details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 0 1rem 0;
+    background: #fff;
+  }
+  .dp-panels-wrapper summary {
+    list-style: none; /* hides default marker in some browsers */
+    cursor: pointer;
+    padding: .75rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  /* custom +/- icon */
+  .dp-panels-wrapper summary::before {
+    content: '+';
+    display: inline-block;
+    width: 1.25rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .dp-panels-wrapper details[open] summary::before { content: '–'; }
+
+  .dp-panels-wrapper .dp-panel-content {
+    padding: 0 1rem 1rem 1rem;
+    border-top: 1px solid #eee;
+  }
+</style>
+<body>
+
+<article>
+<div id="dp-wrapper" class="dp-wrapper">
+  <div class="byui itm112">
+    <h2>Overview</h2>
+    <ul style="list-style-type: disc;">
+      <li><strong>Task: </strong>Download the needed software and run Linux on a virtual machine on your computer.</li>
+      <li><strong>Purpose: </strong>You need this software and Linux running as we will be using it throughout the course.</li>
+    </ul>
+    <hr />
+    <p>Please contact the TA or instructor if you have any questions or encounter any problems during installation. Additionally, you can also Google any errors you get or use AI to help you. Click on the PC or Mac instructions below.</p>
+
+    <div class="dp-panels-wrapper dp-expander-plus">
+
+      <!-- PC -->
+      <details class="dp-panel-group" id="pc-instructions">
+        <summary class="dp-panel-heading">Instructions for PC</summary>
+        <div class="dp-panel-content">
+          <!-- your existing PC content unchanged -->
+          <p><span>If you have a MacBook/Apple computer, skip to the next section of these instructions.</span></p>
+          <p><span>Please complete the following steps before completing anything else in the course. </span></p>
+          <ol>
+            <li><strong>Download the latest version of the following software to your PC/Mac.</strong>
+              <ul>
+                <li><a class="inline_disabled" href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html" target="_blank" rel="noopener">VirtualBox Base Package (run it as administrator if you get an error)</a></li>
+                <li><a class="inline_disabled" href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html" target="_blank" rel="noopener">VirtualBox Extension</a></li>
+                <li><a class="inline_disabled" href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">Ubuntu Desktop</a> - The latest LTS version of Ubuntu Desktop is best. Sometimes newer versions may have issues at first. You may need to edit the settings of the Virtual Machine to use a different display driver. If you have troubles and want and older one that is more likely to work, download the 20.04 version.</li>
+              </ul>
+            </li>
+            <li><strong>Install the following software: </strong>
+              <ul>
+                <li>VirtualBox Platform Package </li>
+                <li>VirtualBox Extension Pack</li>
+              </ul>
+            </li>
+            <li>These settings:
+              <ol>
+                <li>Memory: 4 GB (4096 MB) (Ubuntu Desktop Requirement) </li>
+                <li>Disk: 25 GB (25000 MB) (Ubuntu Desktop recommended)</li>
+                <li>Install Ubuntu Desktop </li>
+              </ol>
+            </li>
+          </ol>
+          <p><strong>Stuck? Want detailed instructions? </strong></p>
+          <p>Follow these details: <strong><a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on VirtualBox 2025.pdf" href="https://byui.instructure.com/courses/356898/files/151134004?wrap=1" target="_blank" rel="noopener" data-canvas-previewable="false" data-api-endpoint="https://byui.instructure.com/api/v1/courses/356898/files/151134004" data-api-returntype="File">How to Install Ubuntu Desktop on VirtualBox 2025.pdf</a></strong></p>
+          <p><strong>Videos that might help:</strong></p>
+          <ul>
+            <li><a class="inline_disabled" href="https://video.byui.edu/media/t/1_07r5q00f?st=0&ed=271" target="_blank" rel="noopener">Installing Virtual Box on Windows 10</a></li>
+            <li><a class="inline_disabled" href="https://video.byui.edu/media/t/1_fomkgd0b" target="_blank" rel="noopener">How to Install Ubuntu in VirtualBox on Windows 10</a></li>
+          </ul>
+          <p><strong>Want it to run faster? Verify that the Hardware Virtualization feature is enabled on your PC's BIOS.</strong></p>
+          <ul>
+            <li style="list-style-type: none;">
+              <ul>
+                <li>Follow the instructions in the following document to complete this step: <a class="instructure_file_link instructure_scribd_file inline_disabled" href="https://byui.instructure.com/courses/356898/modules/items/40447422" target="_blank" rel="noopener" data-canvas-previewable="true" data-api-endpoint="https://byui.instructure.com/api/v1/courses/117656/files/71236746" data-api-returntype="File">How to Enable CPU Virtualization in BIOS.</a></li>
+              </ul>
+            </li>
+          </ul>
+          <p><strong>Want it to run faster? Disable Hyper-V on Windows 10 (not applicable on Mac).</strong></p>
+          <ul>
+            <li style="list-style-type: none;">
+              <ul>
+                <li style="list-style-type: none;">
+                  <ul>
+                    <li>If Hyper-V is enabled, disable it so VirtualBox can run. Use the following link to disable Hyper-V: <a class="inline_disabled" href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v" target="_blank" rel="noopener">Disable Hyper-V, Microsoft</a></li>
+                    <li>If you don't see in your Windows 10 what the screen captures show in the link above, you do not have Hyper-V enabled.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Mac -->
+      <details class="dp-panel-group" id="mac-instructions">
+        <summary class="dp-panel-heading">Instructions for Mac</summary>
+        <div class="dp-panel-content">
+          <!-- your existing Mac content unchanged -->
+          <p>If you have a computer with an Apple CPU (Specifically the M1, M2, M3, M4, etc. chip), follow the instructions below. If you have an Apple CPU with Intel, you could try the instructions below but you may need modify some settings or use the <a class="inline_disabled" href="https://video.byui.edu/media/t/1_73p9g20q?st=46&ed=980" target="_blank" rel="noopener">Virtual Box Install Method</a> at the bottom of the page.</p>
+          <ol>
+            <li><strong>Verify that your MAC has an Apple CPU (Or M1, M2, M3, M4, etc. chip).</strong>
+              <ul>
+                <li>Follow the instructions in the following document to complete this step: <a class="inline_disabled" href="https://support.apple.com/en-us/HT211814" target="_blank" rel="noopener">Mac computers with Apple silicon</a>.</li>
+              </ul>
+            </li>
+            <li><strong>Download and install Virtual Box or UTM. Pick ONE.</strong>
+              <ul>
+                <li>VIRTUAL BOX: Find the Download for your chip type (macOS / Apple Silicon hosts for M Chips): <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
+                <li>UTM: Click on "Download" at the following link to install the software: <a class="inline_disabled" href="https://mac.getutm.app/" target="_blank" rel="noopener">GetUTM</a>.</li>
+              </ul>
+            </li>
+            <li><strong>Download Ubuntu Desktop for ARM Architecture.</strong>
+              <ul>
+                <li>Download the 64-bit ARM desktop image at the following link: <a class="inline_disabled" href="https://cdimage.ubuntu.com/daily-live/20240421" target="_blank" rel="noopener">Ubuntu ARM Desktop Image (GET THE ARM ONE: </a><a href="https://cdimage.ubuntu.com/daily-live/20240421/noble-desktop-arm64.iso">noble-base-arm64.iso</a><a class="inline_disabled" href="https://cdimage.ubuntu.com/ubuntu-base/noble/daily/current" target="_blank" rel="noopener">)</a>.</li>
+              </ul>
+            </li>
+            <li><strong>Create a VM on UTM and install Ubuntu. </strong></li>
+            <li>Follow steps on screen for the installation with the following modifications:
+              <ol>
+                <li>Memory: 4 GB (4096 MB) (Ubuntu Desktop Requirement) </li>
+                <li>Disk: 25 GB (25000 MB) (Ubuntu Desktop recommended)</li>
+                <li>Install Ubuntu Desktop </li>
+              </ol>
+            </li>
+            <li>Black screen on UTM with Mac/Apple M chips?
+              <ol>
+                <li>Try this: Choose Virtualize (not emulate). Install Ubuntu. Then change the There is an issue with the graphics drivers. Go to your VM Setting -> Display. Then Change <code>Emulated Display Card</code> to virtio-ramfb or virtio-gpu-pci. You might need to click on the icon in the top right corner once you have the VM selected. Go do Display and click the drop down and change from either virtio-ramfb or to this virtio-gpu-pci.</li>
+              </ol>
+            </li>
+          </ol>
+          <p><strong>Stuck? Want detailed instructions? </strong></p>
+          <p>Follow these details for Virtual Box: <a class="inline_disabled" href="https://docs.google.com/document/d/1JxKeR2Z07LFrNBiz-U_IG1PSBKFZ6yHy/edit" target="_blank" rel="noopener">How to Install Ubuntu Desktop on Virtual Box on MAC 2025</a></p>
+          <p>Follow these details for UTM: <a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025.pdf" href="https://docs.google.com/document/d/1b2I9qjtqyB8arFPpXVAf5JHIYL84ewMr6lDpUUGA3hM/edit?tab=t.0" target="_blank" rel="noopener" data-canvas-previewable="false" data-api-endpoint="https://byui.instructure.com/api/v1/courses/336300/files/147719742" data-api-returntype="File">How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025.pdf</a> </p>
+          <p><strong>Still stuck and want an older version:</strong></p>
+          <ol>
+            <li><strong></strong>If you get stuck or have issues, go to the following link and select "Ubuntu [<em>release number]</em> ARM 64": <a class="inline_disabled" href="https://mac.getutm.app/gallery" target="_blank" rel="noopener">GetUTM</a> or download the latest version of Ubuntu LTS (20.04 should work for sure).</li>
+            <li><a class="inline_disabled" href="https://video.byui.edu/media/t/1_73p9g20q?st=46&ed=980" target="_blank" rel="noopener">Installing VirtualBox and Ubuntu on older Macs</a></li>
+          </ol>
+          <p><strong>Copy Paste Virtual Box:</strong></p>
+          <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br /><br />cd /media<br />ls<br />cd user<br />ls<br />cd VBox_GAs_7.1.8/<br />ls<br />./autorun.sh <br />sudo apt update<br />sudo apt install bzip2 tar<br />sudo apt install gcc make perl<br />./autorun.sh <br />sudo reboot<br /><br />On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
+        </div>
+      </details>
+
+    </div>
+
+    <hr />
+    <h2>Submission</h2>
+    <ol>
+      <li>Complete the appropriate steps to install Ubuntu on either Virtual Box (PC) or UTM (Mac/Apple) on your computer.</li>
+      <li>Submit a screenshot of your desktop with Ubuntu running on your computer's virtual application or where you are stuck.</li>
+    </ol>
+  </div>
+</div>
+</article>
+</body>
+</html>

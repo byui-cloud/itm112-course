@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Copyright © 2025, Brigham Young University–Idaho. All rights reserved. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Crimson+Pro&display=swap">
+    <link rel="stylesheet" href="../site/reset.css">
+    <link rel="stylesheet" href="../site/style.css">
+    <script defer src="../site/main.js"></script>
+    <title>Week 3 Assignment</title>
+    <link rel="icon" type="image/png" href="../site/logo.png">
+    <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week03/day2.html">
+    <meta name="description" content="Week 3 assignment instructions for the BYU-Idaho ITM 112 Introduction to Linux course">
+</head>
+<style>
+  /* optional: make it look like your current panels */
+  .dp-panels-wrapper details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 0 1rem 0;
+    background: #fff;
+  }
+  .dp-panels-wrapper summary {
+    list-style: none; /* hides default marker in some browsers */
+    cursor: pointer;
+    padding: .75rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  /* custom +/- icon */
+  .dp-panels-wrapper summary::before {
+    content: '+';
+    display: inline-block;
+    width: 1.25rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .dp-panels-wrapper details[open] summary::before { content: '–'; }
+
+  .dp-panels-wrapper .dp-panel-content {
+    padding: 0 1rem 1rem 1rem;
+    border-top: 1px solid #eee;
+  }
+</style>
+<body>
+
+<article>
+<div id="dp-wrapper" class="dp-wrapper">
+  <div class="byui itm112">
+    <h2>Web Server Install</h2>
+    <ul style="list-style-type: disc;">
+      <li><strong>Task: </strong>Install the NGINX Web server via the terminal/shell and take screenshots of your work.</li>
+      <li><strong>Purpose: </strong>Demonstrate your ability to install and set up a web Server via the terminal/shell.</li>
+    </ul>
+
+    <h2>Instructions</h2>
+      <h3>Part 1: Determine whether you will run a web server on your local machine or in Cloud</h3>
+        <p>We recommend you install the webserver in the AWS system, but in case you have problems, the local option is available. Decide which one, AWS or local VM in Virtual Box (or UTM for some Mac/Apple).</p>
+<div class="dp-panels-wrapper dp-expander-plus">
+
+      <details class="dp-panel-group" id="pc-instructions">
+        <summary class="dp-panel-heading">AWS (recommended)</summary>
+        <div class="dp-panel-content">
+          <p><span>Log into <a href="https://awsacademy.instructure.com/">https://awsacademy.instructure.com/</a>, go to "Modules", click "Learner Lab", start the learner lab, click the green AWS button, search for EC2, find your instance, click "Instance State" > "Start instance", open your https://{your instance IP address}:8443. Login to your DC Viewer with your username and password.
+</span></p>         
+        </div>
+      </details>
+
+      <details class="dp-panel-group" id="mac-instructions">
+        <summary class="dp-panel-heading">Local VM</summary>
+        <div class="dp-panel-content">
+          <!-- your local -->
+          <p>Open Virtual Box or UTM and start your VM.</p>
+        </div>
+      </details>
+
+    </div>
+
+      <h3>Part 2: Open the terminal/shell to run the install commands.</h3>
+        <ul>
+          <li>Open the terminal/shell and type this code to get latest update information for packages/apps/security:</li>
+          <code>sudo apt update</code>
+          <li>Then type this code to install teh NGINX webserver:</li>
+          <code>sudo apt install nginx -y</code>
+        </ul>        
+      <h3>Part 3: View your new website installed with your NGINX webserver.</h3>
+        <ul>
+          <li>Open Firefox inside of AWS or inside your local VM (not on your laptop).</li>
+          <li>Go to the URL (this loads the local server/computer webpage): http://localhost/</li>
+          <li>Make sure not to put https, it is http without the 's'.</li>
+          <li>You should see the NGINX welcome page.</li>
+          <li>If that doesn't work, try http://127.0.0.1/ instead.</li>
+        </ul>
+      <h3>Part 4: Modify the default webpage to have your name on it</h3>
+      <ul>
+        <li>Modify the index file that was created when you installed NGINX in /var/www/html.</li>
+        <li>In the VM or AWS terminal, type:</li>
+        <code>sudo gedit /var/www/html/index.html</code>
+        <li>Type your name in the file so it shows on the Firefox browser page you opened above. Put your name and save it. Click refresh on the browser.</li>
+        <li>Alternatively, you can have AI generated HTML/CSS/Javascript into one file to create your own custom webpage about your favorite hobby or a portfolio webpage about you.</li>  
+        <li>Take a screenshot.</li>
+      </ul>
+      <h3>Part 5 (Optional But Really Cool): Make your webserver work outside your VM</h3>
+      <ul>
+        <li>Get the website working in the real-world not just on the localhost.</li>
+        <li>In AWS, go to your EC2 instance and select it, then under the security tab, click "Security Groups", click the security group link, click "Edit inbound rules", click "Add rule", select "HTTP" from the dropdown, click "Save rules".</li>
+        <li>For the inbound source rules (use CIDR 0.0.0.0/0).</li>
+        <li>Find your public IPv4 address of your instance in the AWS EC2 dashboard
+          <ul>
+            <li>Go to Firefox on your laptop (not in the VM or AWS)</li>
+            <li>Type your public IPv4 address into the URL bar (http://{your public IPv4 address}/ )</li>
+            <li>Make sure to not put the 's' in https.</li>
+            <li>You should see your webpage with your name on it.</li>
+            <li>Take a screenshot.</li>
+          </ul>
+      </ul>
+    <hr />
+    <h3>Extra Mile</h3>
+    <p>On the AWS system, you could install or add a database server such as MYSQL, postgresql, dynamodb, or redis.</p>
+    <h2>Submission</h2>
+    <ol>
+      <li>Complete the appropriate steps to install the NGINX webserver and put your name.</li>
+      <li>Submit a screenshot of your webpage with your name and the date/time in picture.</li>
+    </ol>
+  </div>
+</div>
+</article>
+</body>
+</html>

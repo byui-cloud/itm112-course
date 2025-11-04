@@ -60,25 +60,24 @@
     <h2>Instructions</h2>
       <h3>Part 1: Determine whether you will run a web server on your local machine or in Cloud</h3>
         <p>We recommend you install the webserver in the AWS system, but in case you have problems, the local option is available. Decide which one, AWS or local VM in Virtual Box (or UTM for some Mac/Apple).</p>
-<div class="dp-panels-wrapper dp-expander-plus">
+      <div class="dp-panels-wrapper dp-expander-plus">
+        <details class="dp-panel-group" id="pc-instructions">
+          <summary class="dp-panel-heading">AWS (recommended)</summary>
+          <div class="dp-panel-content">
+            <p><span>Log into <a href="https://awsacademy.instructure.com/">https://awsacademy.instructure.com/</a>, go to "Modules", click "Learner Lab", start the learner lab, click the green AWS button, make sure you are in the correct region, search for EC2, find your instance, click "Instance State" > "Start instance", open your https://{your instance IP address}:8443. Login to your DC Viewer with your username and password.
+            </span></p>         
+          </div>
+        </details>
 
-      <details class="dp-panel-group" id="pc-instructions">
-        <summary class="dp-panel-heading">AWS (recommended)</summary>
-        <div class="dp-panel-content">
-          <p><span>Log into <a href="https://awsacademy.instructure.com/">https://awsacademy.instructure.com/</a>, go to "Modules", click "Learner Lab", start the learner lab, click the green AWS button, make sure you are in the correct region, search for EC2, find your instance, click "Instance State" > "Start instance", open your https://{your instance IP address}:8443. Login to your DC Viewer with your username and password.
-</span></p>         
-        </div>
-      </details>
+        <details class="dp-panel-group" id="mac-instructions">
+          <summary class="dp-panel-heading">Local VM</summary>
+          <div class="dp-panel-content">
+            <!-- your local -->
+            <p>Open Virtual Box or UTM and start your Linux VM.</p>
+          </div>
+        </details>
 
-      <details class="dp-panel-group" id="mac-instructions">
-        <summary class="dp-panel-heading">Local VM</summary>
-        <div class="dp-panel-content">
-          <!-- your local -->
-          <p>Open Virtual Box or UTM and start your Linux VM.</p>
-        </div>
-      </details>
-
-    </div>
+      </div>
 
       <h3>Part 2: Open the terminal/shell to run the install commands.</h3>
         <ul>
@@ -105,23 +104,23 @@
         <li>Take a screenshot.</li>
       </ul>
       <h3>Part 5 (Optional But Really Cool): Make your webserver work outside your VM</h3>
-      <ul>
-        <li>Get the website working in the real-world not just on the localhost.</li>
-        <li>In AWS, go to your EC2 instance and select it, then under the security tab, click "Security Groups", click the security group link, click "Edit inbound rules", click "Add rule", select "HTTP" from the dropdown, click "Save rules".</li>
-        <li>For the inbound source rules (use CIDR 0.0.0.0/0).</li>
-        <li>Find your public IPv4 address of your instance in the AWS EC2 dashboard
-          <ul>
-            <li>Go to Firefox on your laptop (not in the VM or AWS)</li>
-            <li>Type your public IPv4 address into the URL bar (http://{your public IPv4 address}/ )</li>
-            <li>Make sure to not put the 's' in https.</li>
-            <li>You should see your webpage with your name on it.</li>
-            <li>Take a screenshot.</li>
-          </ul>
-      </ul>
-    <hr />
-    <h3>Extra Mile</h3>
-    <p>On the AWS system, you could install or add a database server such as MYSQL, postgresql, dynamodb, or redis.</p>
-    <h2>Submission</h2>
+        <ul>
+          <li>Get the website working in the real-world not just on the localhost.</li>
+          <li>In AWS, go to your EC2 instance and select it, then under the security tab, click "Security Groups", click the security group link, click "Edit inbound rules", click "Add rule", select "HTTP" from the dropdown, click "Save rules".</li>
+          <li>For the inbound source rules (use CIDR 0.0.0.0/0).</li>
+          <li>Find your public IPv4 address of your instance in the AWS EC2 dashboard
+            <ul>
+              <li>Go to Firefox on your laptop (not in the VM or AWS)</li>
+              <li>Type your public IPv4 address into the URL bar (http://{your public IPv4 address}/ )</li>
+              <li>Make sure to not put the 's' in https.</li>
+              <li>You should see your webpage with your name on it.</li>
+              <li>Take a screenshot.</li>
+            </ul>
+        </ul>
+      <hr />
+      <h3>Extra Mile</h3>
+        <p>On the AWS system, you could install or add a database server such as MYSQL, postgresql, dynamodb, or redis.</p>
+  <h2>Submission</h2>
     <ol>
       <li>Complete the appropriate steps to install the NGINX webserver and put your name.</li>
       <li>Submit a screenshot of your webpage with your name and the date/time in picture.</li>

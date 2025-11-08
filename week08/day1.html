@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!# Copyright © 2025, Brigham Young University–Idaho. All rights reserved. #>
+<!-- Copyright © 2025, Brigham Young University–Idaho. All rights reserved. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,71 +10,194 @@
     <script defer src="../site/main.js"></script>
     <title>Week 8 Assignment</title>
     <link rel="icon" type="image/png" href="../site/logo.png">
-    <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week07/day1.html">
+    <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week08/day1.html">
     <meta name="description" content="Week 8 assignment instructions for the BYU-Idaho ITM 112 Introduction to Linux course">
 </head>
 
 <body>
+
 <article>
-  <h1>Week 8: Hands-on Exercise: Processes</h1>
-
-  <h2>Overview</h2>
-  <p><strong>Prerequisite: </strong>Open Ubuntu Desktop (AWS or Local VM but you need the GUI - where you can use the mouse).</p>
-  <p><strong>Task: </strong>Launch, Suspend, and Kill processes</p>
-  <p><strong>Purpose: </strong>This activity will allow you to better understand how to suspend and kill processes.</p>
-
-  <h2>Instructions</h2>
+<div id="dp-wrapper" class="dp-wrapper">
+  <div class="byui itm112">
+    <h2>Week 8: Hands-on Exercise: Permissions Review & Docker</h2>
+    <p><strong>Scenario:</strong> In this scenario, you are on a development team and you need multiple users to have read/write to the same folder /var/www/html. You need to create a new Linux 'group' for your web team to have permissions to the files on your AWS web server. Create a new user for yourself and add it to the group. Set the password for your new user.</p>
     <ul style="list-style-type: disc;">
-      <li><strong>Read: </strong>the Hands-on Exercise Scenarios you generate with your favorite AI using the prompts below.</li>
-      <li><strong>Complete: </strong>each part of the exercise in your Linux system (AWS or local VM).</li>
-      <li><strong>Submit: </strong>your completed deliverables for each part of the assignment by the due date.</li>
+      <li><strong>Prerequisite: </strong>Turn on and use your AWS Linux Server.</li>
+      <li><strong>Task: </strong>Complete the exercises and take screenshots of your work.</li>
+      <li><strong>Purpose: </strong>Demonstrate your knowledge of permissions in a Linux environment and use Docker.</li>
     </ul>
 
+    <h2>Instructions</h2>
+    <ul style="list-style-type: disc;">
+      <li><strong>Read: </strong>the Hands-on Exercise Scenarios you generate with your favorite AI using the prompts below.</li>      
+      <li><strong>Complete: </strong>each part of the exercise in your Linux system (AWS required this time).</li>
+      <li><strong>Submit: </strong>your completed deliverables for each part of the assignment by the due date.</li>
+    </ul>    
+
     <h2>Exercise</h2>
-      <h3>Part 1: Launch Xeyes</h3>
-        <p><strong>Ask your favorite AI: </strong>"For a Linux class, help me launch at least two 'xeyes' at the same time and one with 'xeyes &' (you should see eyeballs that follow your mouse). On your keyboard, hit 'CTRL + Z' to suspend the job. Use the 'jobs' command to see what is running. Use fg, and bg to move the job to the foreground and background."</p>
+      <h3>Part 1: Scenario Instructions</h3>
+      <p>Ask your favorite AI for help as needed.</p>
+        <ol>
+          <li>Create a new group called <code>yournameteam</code> but with your name.</li>
+          <li>Create a new user with your own name and add that user to that <code>yournameteam</code> group.</li>
+          <li>Set the password for that user.</li>
+          <li>Go to the <code>/var/www/</code> folder on your AWS Linux system.</li>
+          <li>Make the <code>html</code> folder and sub files have the group permission be the group you made (<code>yournameteam</code>) using <code>chgrp -R</code>.</li>
+          <li>Type <code>ls -l</code> to show your output.</li>
+          <li>
+            Make the group have read/write access to the folder (folder needs execute too) and files inside of it (<code>chmod -R</code>).  
+            <br>Type <code>ls -l</code> to show your output.
+          </li>
+          <li>
+            Use <code>su</code> to switch to your user (<code>yourname</code>).  
+            Go into the <code>html</code> folder.  
+            Create a new file with your name (<code>yourname.html</code>) using <code>touch</code> or <code>vi</code>.  
+            Use <code>vi</code> to put your name in the file.  
+            Open it in your browser to see if it is working.  
+            Make sure it has the appropriate permissions to be visible on the internet.
+          </li>
+        </ol>
       <h4>Next Steps</h4>
       <ul>
-        <li>Open your Ubuntu Desktop Linux (either AWS or local VM - you have to use the GUI - the one that uses the mouse too).</li>
+        <li>Open your AWS Ubuntu Linux (AWS required).</li>
         <li>Complete the scenario and ask AI for help as needed.</li>
         <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
         <li>Take a screenshot of your work with the date and time.</li>
       </ul>  
 
-      <h3>Part 2: Kill xeyes</h3>
-      <p><strong>Ask your favorite AI: </strong>"Help me use 'xeyes' in Linux and kill the process using two different methods inluding 'kill -9'."</p>
+      <h3>Part 2: Change Permissions & Check Permissions</h3>
+      <p><strong>Ask your favorite AI: </strong>"In Linux, help me make a new file called YOURNAMEpassword.html and make it so that it is not accessible to the internet but is readable and writable for your user and for your group your made. Type 'ls -l' to show your output."</p>
       <h4>Next Steps</h4>
         <ul>
-          <li>In your Ubuntu Desktop Linux (either AWS or local VM).</li>
+          <li>Open your AWS Ubuntu Linux (AWS required).</li>
           <li>Complete the scenario and ask AI for help as needed.</li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
           <li>Take a screenshot of your work with the date and time.</li>
         </ul>        
-      <h3>Part 3: Use xclock, xcalc, xclipboard, ico, xev, xkill, xlogo, or xman</h3>
-      <p><strong>Ask your favorite AI: </strong>"Help me use ONE OF these Linux commands: xclock, xcalc, xclipboard, ico, xev, xkill, xlogo, or xman. Use one or more of those commands and have them run in the background and also in the foreground."</p>
+      <h3>Part 3: Docker Bulletin Board Website Setup (AWS)</h3>
+        <p>Follow the steps below to set up and run the Docker Bulletin Board app on AWS. When finished, take screenshots of:</p>
       <h4>Next Steps</h4>
         <ul>
-          <li>In your Ubuntu Linux (either AWS or local VM).</li>
+         <li>Open your AWS Ubuntu Linux (AWS required).</li>
           <li>Complete the scenario and ask AI for help as needed.</li>
-          <li>If you get an error "no such job", make sure to change the numbers to match (ex: instead of %1 it might be %2 or %4) </li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
           <li>Take a screenshot of your work with the date and time.</li>
-        </ul>  
+          <li>Install Docker and run your docker container</li>
+          <li>If the docker container is running, the bulletin board website should work on AWS (accessible via port 8000)</li>
+        </ul>
 
-      <h3>Part 4: Use another one: xclock, xcalc, xclipboard, ico, xev, xkill, xlogo, or xman</h3>
-      <p><strong>Ask your favorite AI: </strong>"Help me kill and use another ONE OF these Linux commands: xclock, xcalc, xclipboard, ico, xev, xkill, xlogo, or xman."</p>
-      <h4>Next Steps</h4>
+        <h4>Useful Commands</h4>
+        <ol>
+          <li><strong>Install Docker</strong><br>
+            <pre><code>sudo apt install docker.io</code></pre>
+          </li>
+
+          <li><strong>Check Docker version</strong><br>
+            <pre><code>sudo docker version</code></pre>
+          </li>
+
+          <li><strong>List Docker images</strong><br>
+            <pre><code>sudo docker image ls</code></pre>
+          </li>
+
+          <li><strong>Download the bulletin board project</strong><br>
+            <pre><code>
+      cd ~
+      git clone https://github.com/dockersamples/node-bulletin-board
+            </code></pre>
+            <p><a href="https://github.com/dockersamples/node-bulletin-board" target="_blank">View project on GitHub</a></p>
+          </li>
+
+          <li><strong>Change into the app directory</strong><br>
+            <pre><code>cd node-bulletin-board/bulletin-board-app</code></pre>
+          </li>
+
+          <li><strong>Build the Docker image</strong><br>
+            <p>Make sure to include the period (<code>.</code>) at the end of the command.</p>
+            <pre><code>sudo docker build --tag bulletinboard:1.0 .</code></pre>
+          </li>
+
+          <li><strong>List Docker images again</strong><br>
+            <pre><code>sudo docker image ls</code></pre>
+          </li>
+
+          <li><strong>Run the Docker container</strong><br>
+            <p>This publishes the app on port 8000 (mapped to container port 8080).</p>
+            <pre><code>sudo docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0</code></pre>
+          </li>
+
+          <li><strong>Check running Docker containers</strong><br>
+            <pre><code>sudo docker ps</code></pre>
+          </li>          
+
+          <li><strong>Allow inbound traffic on AWS</strong><br>
+            <p>
+              Go to EC2 → Instances → Select your instance → Security Group → Edit inbound rules.<br>
+              Add a Custom TCP rule for port 8000 with source 0.0.0.0/0, then save the rules.
+            </p>
+          </li>
+
+          <li><strong>Access the bulletin board website</strong><br>
+            <p>
+              Open your web browser and go to <code>http://&lt;your-ec2-public-ip&gt;:8000</code> to see the bulletin board app.
+            </p>
+            <p>Replace &lt;your-ec2-public-ip&gt; with your Public IPv ip address from your AWS instance.</p>
+            <p>Make sure to use http and NOT https.</p>
+          </li>          
+
+        </ol>
+
+        <h4>Final Step</h4>
+        <p>Once your container is running and the website is accessible at <code>http://&lt;your-ec2-public-ip&gt;:8000</code>, take screenshots of:</p>
         <ul>
-          <li>In your Ubuntu Linux (either AWS or local VM).</li>
-          <li>Complete the scenario and ask AI for help as needed.</li>
-          <li>If you get an error "no such job", make sure to change the numbers to match (ex: instead of %1 it might be %2 or %4) </li>
-          <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-          <li>Take a screenshot of your work with the date and time.</li>
-        </ul>          
-
+          <li>The running container list (<code>sudo docker ps</code>)</li>
+          <li>The bulletin board website open in your browser</li>
+        </ul>
+ 
   <h2>Submission</h2>
-    <p>Submit your screenshots in one document showing the scenarios above. Include your name and the date.</p>  
+  <p>Submit one document with your screenshots from the excercise scenarios above that have your name and the date/time in pictures.</p>
 
+
+<h2>Extra Mile: Docker NGINX and OS Check Instructions</h2>
+
+<ul>
+  <li><strong>See what version of Linux the Docker container is running (by SSH into the Docker):</strong>
+    <ul>
+      <li><pre><code>sudo docker exec -it bb sh</code></pre></li>
+      <li><pre><code>cat /etc/os-release</code></pre></li>
+    </ul>
+  </li>
+
+  <li><strong>Download an NGINX Docker image and deploy it on port 8080:</strong>
+    <ul>
+      <li><pre><code>sudo docker pull nginx:latest</code></pre></li>
+      <li><pre><code>sudo docker run --publish 8080:80 --detach --name nx nginx</code></pre></li>
+    </ul>
+  </li>
+
+  <li><strong>Open port 8080 in AWS Security Group inbound rules:</strong>
+    <ul>
+      <li>Go to EC2 → Instances → Select your instance → Security Group → Edit inbound rules.</li>
+      <li>Add a Custom TCP rule for port <code>8080</code> with source <code>0.0.0.0/0</code>.</li>
+    </ul>
+  </li>
+
+  <li><strong>SSH into the NGINX Docker container:</strong>
+    <ul>
+      <li><pre><code>sudo docker exec -it nx sh</code></pre></li>
+    </ul>
+  </li>
+
+  <li><strong>Check the OS of the NGINX Docker container:</strong>
+    <ul>
+      <li><pre><code>cat /etc/os-release</code></pre></li>
+    </ul>
+  </li>
+</ul>
+
+
+  </div>
+</div>
 </article>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Copyright © 2025, Brigham Young University–Idaho. All rights reserved. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Crimson+Pro&display=swap">
+    <link rel="stylesheet" href="../site/reset.css">
+    <link rel="stylesheet" href="../site/style.css">
+    <script defer src="../site/main.js"></script>
+    <title>Week 8 Assignment</title>
+    <link rel="icon" type="image/png" href="../site/logo.png">
+    <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week08/day2.html">
+    <meta name="description" content="Week 8 assignment instructions for the BYU-Idaho ITM 112 Introduction to Linux course">
+</head>
+
+<body>
+
+<article>
+<div id="dp-wrapper" class="dp-wrapper">
+  <div class="byui itm112">
+ <h2>Week 8: Mid-term: Capture the Flag (SSH into new server & Find image files)</h2>
+  
+      <p>
+        <strong>Overview: </strong>In Cybersecurity, Capture the Flag is a common cybersecurity event to find hidden files on a server.
+        In this activity, you will SSH into a Linux server and search for <strong>eight</strong> image files of country flags.
+        The names of the files follow this format: <code>{Country}-NNNN</code>, where <code>{Country}</code> is a country
+        (e.g., <em>Peru</em>) and <code>NNNN</code> is a four-digit year. Files may have an extension (e.g., <code>.png</code>)
+        or may not. A file name or its directory may be hidden (name begins with a dot).
+      </p>
+
+      <h3>Connect to the Server</h3>
+      <ul style="list-style-type: disc;">
+        <li>On your laptop (not the Linux VM nor AWS Linux), open a shell (Windows: powershell) (Apple/Mac: terminal) and connect with SSH:<br>
+          <code>ssh student@52.38.245.170</code>
+        </li>
+        <li>When prompted, use the password: <code>Letmeinplease12345!</code></li>
+      </ul>
+
+      <h3>Goal</h3>
+      <ul style="list-style-type: disc;">
+        <li>Use Linux commands to find the <strong>full path</strong> to each target file without manually browsing the whole filesystem.</li>
+        <li>Each question of the quiz will give hints listing the World Cup <em>runner-up</em>, <em>third place</em>, and the <em>host country</em>.
+            From provided FIFA websites, determine the <strong>winner (champion)</strong> and the <strong>year</strong> from those hints, then search for a file named like
+            <code>WinnerCountry-YYYY</code>.</li>
+        <li>Here are some websites with winners through the years: &nbsp;<a class="inline_disabled" title="Link" href="https://www.foxsports.com/soccer/2022-fifa-world-cup/history" target="_blank" rel="noopener">FIFA World Cup History,</a> &nbsp;<a class="inline_disabled" title="Link" href="https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals" target="_blank" rel="noopener">List of FIFA World Cup Finals,</a> &nbsp;<a class="inline_disabled" title="Link" href="https://www.nbcsports.com/soccer/news/world-cup-winners-list-past-winners-year-by-year-tournaments" target="_blank" rel="noopener">List of Winners with Location</a></li>
+        <li>Answer each question with the complete absolute path to the file you found, e.g.,
+          <code>/home/user1/peru-1815.jpg</code> (Linux uses forward slashes <code>/</code>).</li>
+      </ul>
+
+      <h3>Hints & References</h3>
+      <ul style="list-style-type: disc;">
+        <li>You may use websites that list FIFA World Cup winners, finals, and locations to decode the hints.</li>
+        <li>Once you know the country and year, try using <code>locate</code> or <code>find</code> to discover the path.</li>
+        <li>Remember that names are case-sensitive. Country names start with an uppercase letter.</li>
+      </ul>
+
+      <h3>Commands You May Need</h3>
+      <ul style="list-style-type: disc;">
+        <li><strong>locate</strong></li>
+        <li><strong>find</strong></li>
+        <li><strong>grep</strong></li>
+        <li>Hidden directories start with a dot.</li>
+        <li>Use AI or Google to help you as needed.</li>
+      </ul>
+
+      <h3>Example Workflow</h3>
+      <ol>
+        <li>From the question’s hints (Runner-up, Third place, Host), identify the <strong>winner</strong> and the <strong>year</strong>.</li>
+        <li>Run: find, grep, or <code>locate WinnerCountry-YYYY</code>. If nothing appears, try a different search.</li>
+        <li>Copy the full path you discover for your answer.</li>
+      </ol>
+
+      <h3>Deliverables for CTF</h3>
+      <ul style="list-style-type: disc;">
+        <li>For each of the questions, provide the <strong>full absolute path</strong> to the discovered file.</li>
+      </ul>
+ 
+  <h2>Submission</h2>
+  <p>Take the quiz and submit the full path to the file for each champion/year based on each question hint. Example: /home/user1/peru-1815.jpg</p>
+  </div>
+</div>
+</article>
+</body>
+</html>

@@ -19,24 +19,79 @@
   <h1>Week 9: Hands-on Exercise</h1>
 
   <h2>Overview</h2>
-  <p><strong>Task: </strong>Make a designated application open on login in Linux.</p>
-  <p><strong>Purpose: </strong>This activity will allow you to better understand how VIM operates.</p>
+  <p><strong>Task: </strong>Connect to Linux Server via ssh and create files and folders.</p>
+  <p><strong>Purpose: </strong>This activity will allow you to better understand how use SSH and create files and folders.</p>
 
   <h2>Instructions</h2>
     <ol>
-    <li><strong>Open </strong><a href="https://docs.google.com/document/d/1zzNr8ANGNnra2KiwRxOgMVwuefOvWnZz/edit?usp=sharing&ouid=112147885706036646597&rtpof=true&sd=true">the Linux VIM tutorial document.</a></li>
+    <li><strong>Connect </strong>Connect via ssh: student@52.38.245.170 using the password: <code>Letmeinplease12345!</code></a></li>
     <li><strong>Follow </strong>the steps of the tutorial.</li>
     <li><strong>Take </strong>screenshots of it your file and of it working.</li>
     </ol>
+
+  <h3>Part 1: Connect to the Server</h3>
+    <ul style="list-style-type: disc;">
+      <li>On your laptop (not the Linux VM nor AWS Linux), open a shell (Windows: powershell) (Apple/Mac: terminal) and connect with SSH:<br>
+        <code>ssh student@52.38.245.170</code>
+      </li>
+      <li>When prompted, use the password: <code>Letmeinplease12345!</code></li>
+    </ul>
+
+  <h3>Part 2: Make a file on the ssh server in the /tmp/ folder</h3>
+    <p><strong>Ask your favorite AI </strong>if you need help to complete these tasks:</p>
+    <ul>
+      <li># Change directories to the /tmp/ folder.</li>
+      <code>cd /tmp/</code>
+      <li>#Type 'pwd' to see what folder you are in.</li>
+      <code>pwd</code>
+      <li># Create a new file named: yournamefile.txt</li>
+      <code>touch yournamefile.txt</code>
+      <li># Use 'ls' to list the files in the /tmp/ folder to confirm your file is there.</li>
+      <code>ls</code>
+      <li># Make a directory with yourname</li>
+      <code>mkdir yourname</code>
+      <li># Use 'ls' to list the files in the /tmp/ folder to confirm your directory is there.</li>
+      <code>ls</code>
+      <li># Change directories into the folder with the 'cd' command:</li>
+      <code>cd yourname</code>
+      <li># Create a new file called yourname.html (put your name) and do it using the text editor VIM instead of the 'touch' command:</li>
+      <code>vi yourname.html</code>
+      <li>#Now you are using VIM or VI text editor. To edit the file:</li>
+      <li>Type "i" to go into insert mode, which allows you to add text:</li>
+      <code>Press the 'i' key to enter insert mode.</code>
+      <code>Type "My name is ....." (put your name).</code>
+      <code>To exit "insert" mode in VIM, hit ESC on your keyboard.</code>
+      <code>Type ":wq". That will save (write) and quit.</code>
+      <li>Disconnect from the SSH server</li>
+      <code>exit</code>
+    </ul>
+    <h4>Next Steps</h4>
+      <ul>
+        <li>In your Ubuntu Linux (either AWS or local VM).</li>
+        <li>Complete the scenario and ask AI for help as needed.</li>
+        <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
+        <li>Take a screenshot of your work with the date and time.</li>
+      </ul>       
+
+  <h3>Part 3: Remotely copy your file via SCP</h3>
+    <ul>
+      <li># Now from your laptop in a terminal (Windows: powershell) (Mac/Apple: terminal) (not the ssh server, not from AWS, not from Linux) make a folder using your name on your computer: </li>
+      <code>mkdir sshfolderyourname</code>
+      <li># Go into the folder</li>
+      <code>cd sshfolderyourname/</code>
+      <li># Use SCP to remotely copy a file to your computer</li>
+      <code>scp student@52.38.245.170:/tmp/yourfolder/yourname.html.</code>
+      <li># When prompted, use the password: <code>Letmeinplease12345!</code></li>
+      <li># Use 'ls' to list the files in your folder to confirm your file is there.</li>
+      <code>ls</code>
+      <li>Take a screenshot of the file succesfully copying to your laptop.</li>
+    </ul>
+
   <h2>Submission</h2>
     <p>Submit your screenshots in one document showing the scenarios above. Include your name and the date.</p>  
 
   <h2>Extra Mile</h2>
-    <p>Start Vimtutor in your Linux terminal:</p>
-    <code>vimtutor</code>
-    <p>If it does not work, install it with:</p>
-    <code>sudo apt install vim</code>
-    <p>Complete some or all of the tutorial.</p>
+    <p>Explore the ssh server. EX: hat OS is it? What is installed? What commands can you use?</p>
 </article>
 </body>
 </html>

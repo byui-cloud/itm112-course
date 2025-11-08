@@ -16,25 +16,33 @@
 
 <body>
 <article>
-  <h1>Week 9: Hands-on Exercise</h1>
+  <h1>Week 9: Hands-on Exercise - SSH</h1>
 
   <h2>Overview</h2>
   <p><strong>Task: </strong>Connect to Linux Server via ssh and create files and folders.</p>
   <p><strong>Purpose: </strong>This activity will allow you to better understand how use SSH and create files and folders.</p>
+ssh pi4@10.15.0.12
 
+The password is: raspberry
   <h2>Instructions</h2>
     <ol>
-    <li><strong>Connect </strong>Connect via ssh: student@52.38.245.170 using the password: <code>Letmeinplease12345!</code></a></li>
+    <li><strong>In-person Classes: </strong>Connect to the Raspberry pi instead using ssh pi4@10.15.0.12 with the password: <code>raspberry</code></a></li>
+    <li><strong>Online Classes: </strong>Connect via ssh: ssh student@52.38.245.170 using the password: <code>Letmeinplease12345!</code></a></li>
     <li><strong>Follow </strong>the steps of the tutorial.</li>
     <li><strong>Take </strong>screenshots of it your file and of it working.</li>
     </ol>
 
   <h3>Part 1: Connect to the Server</h3>
     <ul style="list-style-type: disc;">
-      <li>On your laptop (not the Linux VM nor AWS Linux), open a shell (Windows: powershell) (Apple/Mac: terminal) and connect with SSH:<br>
-        <code>ssh student@52.38.245.170</code>
-      </li>
+      <li>On your laptop (not the Linux VM nor AWS Linux), open a shell (Windows: powershell) (Apple/Mac: terminal) and connect with SSH:</li>
+      <h4>ONLINE CLASSES:</h4>
+      <code>ssh student@52.38.245.170</code>
+
       <li>When prompted, use the password: <code>Letmeinplease12345!</code></li>
+      <h4>IN-PERSON CLASSES:</h4>
+      <code>ssh pi4@10.15.0.12</code>
+      </li>
+      <li>When prompted, use the password: <code>raspberry</code></li>      
     </ul>
 
   <h3>Part 2: Make a file on the ssh server in the /tmp/ folder</h3>
@@ -80,8 +88,13 @@
       <li># Go into the folder</li>
       <code>cd sshfolderyourname/</code>
       <li># Use SCP to remotely copy a file to your computer</li>
+      <h4>ONLINE CLASSES:</h4>
       <code>scp student@52.38.245.170:/tmp/yourfolder/yourname.html.</code>
       <li># When prompted, use the password: <code>Letmeinplease12345!</code></li>
+      <h4>IN-PERSON CLASSES:</h4>
+      <code>ssh pi4@10.15.0.12:/tmp/yourfolder/yourname.html</code>
+      </li>
+      <li>When prompted, use the password: <code>raspberry</code></li>      
       <li># Use 'ls' to list the files in your folder to confirm your file is there.</li>
       <code>ls</code>
       <li>Take a screenshot of the file succesfully copying to your laptop.</li>
@@ -91,7 +104,8 @@
     <p>Submit your screenshots in one document showing the scenarios above. Include your name and the date.</p>  
 
   <h2>Extra Mile</h2>
-    <p>Explore the ssh server. EX: hat OS is it? What is installed? What commands can you use?</p>
+    <p>Explore the ssh server. EX: What OS this SSH server? What is installed? What commands can you use?</p>
+    <p>IN-PERSON CLASSES: Try some of the other activites shown in class.</p>
 </article>
 </body>
 </html>

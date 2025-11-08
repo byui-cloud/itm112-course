@@ -19,57 +19,81 @@
 <article>
 <div id="dp-wrapper" class="dp-wrapper">
   <div class="byui itm112">
-    <h2>Week 8: Hands-on Exercise: Permissions Review & Docker</h2>
+  <h2>Week 8: Hands-on Exercise — Locate, Find &amp; Backup</h2>
     <ul style="list-style-type: disc;">
+      <li><strong>Prerequisite: </strong>Turn on and use your AWS Linux Server.</li>
       <li><strong>Task: </strong>Complete the exercises and take screenshots of your work.</li>
-      <li><strong>Purpose: </strong>Demonstrate your knowledge of permissions in a Linux environment.</li>
+      <li><strong>Purpose:</strong> Practice file discovery tools (<code>locate</code>, <code>find</code>) and backups with <code>tar</code>.</li>
     </ul>
 
     <h2>Instructions</h2>
     <ul style="list-style-type: disc;">
       <li><strong>Read: </strong>the Hands-on Exercise Scenarios you generate with your favorite AI using the prompts below.</li>      
-      <li><strong>Complete: </strong>each part of the exercise in your Linux system (AWS required this time).</li>
+      <li><strong>Complete: </strong>each part of the exercise in your Linux system (AWS or Local Linux).</li>
       <li><strong>Submit: </strong>your completed deliverables for each part of the assignment by the due date.</li>
     </ul>    
 
     <h2>Exercise</h2>
-      <h3>Part 1: Check Permissions & Change Group/Owner</h3>
-        <p><strong>Ask your favorite AI: </strong>"Supervisor asks you to check the permissions on the web server. Change the ‘group’ or the ‘owner’ to the ‘remote_user’ for access."</p>
+      <h3>Part 1: 'Find' vs 'Locate'</h3>
+          <p><strong>Scenario:</strong> You are an intern and you need to find the passwd file using the <code>locate</code> function. Next, use the <code>find</code> function.</p>
+        <p><strong>Ask your favorite AI: </strong>"Help me find the passwd file using the <code>locate</code> function. Next, use the <code>find</code> function."</p>
+        <ul>
+          <li><strong>Ask AI for help as needed:</strong></li>
+          <li>Find the <code>/etc/passwd</code> file using <code>locate</code>.</li>
+          <li>Install <code>locate</code> if necessary.</li>
+          <li>Create a file named with your name, for example: <code>yourname.txt</code>.</li>
+          <li>See if <code>locate</code> can find your new file. Try using <code>find</code> instead.</li>
+          <li>Run the locate database update: <code>sudo updatedb</code>.</li>
+          <li>Now see if <code>locate</code> can find <code>yourname.txt</code>.</li>
+          <li>See if you can find any other <code>.txt</code> files on your system.</li>
+          <li>Try the <code>find</code> command instead.</li>
+        </ul>
+
       <h4>Next Steps</h4>
       <ul>
-        <li>Open your AWS Ubuntu Linux (AWS required).</li>
+        <li>Open your AWS Ubuntu Linux (AWS or local Linux).</li>
         <li>Complete the scenario and ask AI for help as needed.</li>
         <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
         <li>Take a screenshot of your work with the date and time.</li>
       </ul>  
 
-      <h3>Part 2: Change Permissions & Check Permissions</h3>
-      <p><strong>Ask your favorite AI: </strong>"Help me allow the ‘remote_user’ group or user to have write permissions. "</p>
+      <h3>Part 2: Finding Specific Files</h3>
+        <p><strong>Scenario:</strong> You are an intern an you need to find a specific file, folder, and large files.</p>
+        <p><strong>Ask your favorite AI: </strong>"Help me search for another file type other than .txt such as .log (you pick something) and see if it is on your Linux system."</p>
+          <ul>
+            <li>Search for another file type other than <code>.txt</code> such as <code>.log</code> (or another type you choose) and see if it is on your Linux system.</li>
+            <li>Make a folder with your name and search for it. Only use a directory/folder search.</li>
+            <li>Search for large file sizes. Determine what is the largest file on your Linux box.</li>
+          </ul>
+      <h4>Next Steps</h4>
+        <ul>
+          <li>Open your AWS Ubuntu Linux (AWS or local Linux).</li>
+          <li>Complete the scenario and ask AI for help as needed.</li>
+          <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
+          <li>Take a screenshot of your work with the date and time.</li>
+        </ul>           
+
+      <h3>Part 3: Backup Website</h3>
+      <p><strong>Scenario:</strong> You are an intern an you need to backup the website folder before you make some changes.</p>
+      <p><strong>Ask your favorite AI: </strong>"Help me use 'tar' to compress the folder /var/www/html as a backup or another folder. Uncompress it somewhere."</p>
       <h4>Next Steps</h4>
         <ul>
           <li>Open your AWS Ubuntu Linux (AWS required).</li>
           <li>Complete the scenario and ask AI for help as needed.</li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
           <li>Take a screenshot of your work with the date and time.</li>
-        </ul>        
-      <h3>Part 3: Remove Read Permissions</h3>
-      <p><strong>Ask your favorite AI: </strong>"Help me remove read permissions on a file and see if that user can open it."</p>
+        </ul>  
+      <h3>Part 4: Restore Website</h3>
+      <p><strong>Scenario:</strong> You are an intern an you need to restore the website folder from your backup.</p>
+      <p><strong>Ask your favorite AI: </strong>"Help me restore the backup I made of /var/www/html or another folder using 'tar'."</p>
       <h4>Next Steps</h4>
         <ul>
-         <li>Open your AWS Ubuntu Linux (AWS required).</li>
+          <li>Open your AWS Ubuntu Linux (AWS required).</li>
           <li>Complete the scenario and ask AI for help as needed.</li>
+          <li>Make sure the website restore worked and the website still works.</li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
           <li>Take a screenshot of your work with the date and time.</li>
-        </ul>  
-      <h3>Part 4: Remove Webpage File Access</h3>
-      <p><strong>Ask your favorite AI to: </strong>"On your AWS Linux web nginx server, modify the permission of a webpage file like yourname.html so that you can't see the webpage? Change it back."</p>
-      <h4>Next Steps</h4>
-        <ul>
-         <li>Open your AWS Ubuntu Linux (AWS required).</li>
-          <li>Complete the scenario and ask AI for help as needed.</li>
-          <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-          <li>Take a screenshot of your work with the date and time.</li>
-        </ul>  
+        </ul>
  
   <h2>Submission</h2>
   <p>Submit one document with your screenshots from the excercise scenarios above that have your name and the date/time in pictures.</p>

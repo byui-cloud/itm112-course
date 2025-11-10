@@ -45,24 +45,24 @@ The password is: raspberry
       <li>When prompted, use the password: <code>raspberry</code></li>      
     </ul>
 
-  <h3>Part 2: Make a file on the ssh server in the /tmp/ folder</h3>
+  <h3>Part 2: Make a file and folder on the ssh server in the /tmp/ folder</h3>
     <p><strong>Ask your favorite AI </strong>if you need help to complete these tasks:</p>
     <ul>
       <li># Change directories to the /tmp/ folder.</li>
       <code>cd /tmp/</code>
       <li>#Type 'pwd' to see what folder you are in.</li>
       <code>pwd</code>
-      <li># Create a new file named: yournamefile.txt</li>
-      <code>touch yournamefile.txt</code>
-      <li># Use 'ls' to list the files in the /tmp/ folder to confirm your file is there.</li>
-      <code>ls</code>
       <li># Make a directory with yourname</li>
       <code>mkdir yourname</code>
       <li># Use 'ls' to list the files in the /tmp/ folder to confirm your directory is there.</li>
       <code>ls</code>
       <li># Change directories into the folder with the 'cd' command:</li>
       <code>cd yourname</code>
-      <li># Create a new file called yourname.html (put your name) and do it using the text editor VIM instead of the 'touch' command:</li>
+      <li># Create a new file named: yournamefile.txt</li>
+      <code>touch yournamefile.txt</code>
+      <li># Use 'ls' to list the files in the /tmp/ folder to confirm your file is there.</li>
+      <code>ls</code>      
+      <li># Edit the new file called yournamefile.html (put your name) and do it using the text editor VIM:</li>
       <code>vi yourname.html</code>
       <li>#Now you are using VIM or VI text editor. To edit the file:</li>
       <li>Type "i" to go into insert mode, which allows you to add text:</li>
@@ -70,8 +70,7 @@ The password is: raspberry
       <code>Type "My name is ....." (put your name).</code>
       <code>To exit "insert" mode in VIM, hit ESC on your keyboard.</code>
       <code>Type ":wq". That will save (write) and quit.</code>
-      <li>Disconnect from the SSH server</li>
-      <code>exit</code>
+      <li>If you have problems and need to save without quitting, type: ESC and then ":q!".</li>
     </ul>
     <h4>Next Steps</h4>
       <ul>
@@ -83,7 +82,7 @@ The password is: raspberry
 
   <h3>Part 3: Remotely copy your file via SCP</h3>
     <ul>
-      <li># Now from your laptop in a terminal (Windows: powershell) (Mac/Apple: terminal) (not the ssh server, not from AWS, not from Linux) make a folder using your name on your computer: </li>
+      <li># Now open another terminal (Windows: powershell) (Mac/Apple: terminal) window (leave the ssh one you were using) from your laptop (not the ssh server, not from AWS, not from Linux) make a folder using your name on your computer: </li>
       <code>mkdir sshfolderyourname</code>
       <li># Go into the folder</li>
       <code>cd sshfolderyourname/</code>
@@ -98,6 +97,9 @@ The password is: raspberry
       <li># Use 'ls' to list the files in your folder to confirm your file is there.</li>
       <code>ls</code>
       <li>Take a screenshot of the file succesfully copying to your laptop.</li>
+      <li>In your ssh terminal, disconnect.</li>
+      <li>Disconnect from the SSH server</li>
+      <code>exit</code>      
     </ul>
 
   <h2>Submission</h2>

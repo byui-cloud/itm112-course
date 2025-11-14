@@ -17,41 +17,58 @@
 <body>
 
 <article>
-   <h1>Prepare: Ch. 19 - Grep</h1>
+   <h1>Prepare: Google Cloud Platform (GCP) & Docker</h1>
 
    <h2>Overview</h2>
-    <p><strong>Task: </strong>Use the textbook and AI tools to learn about Grep in Linux.</p>
-    <p><strong>Purpose: </strong>Learn about Grep.</p>
-
-  <h2>Instructions</h2>
-  
-  <ol>
-  <li><strong>Skim Read</strong> Chapter 19 of the <a href="https://linuxcommand.org/tlcl.php">textbook</a>.</li>    
-
-  <li><strong>Open</strong> the AI model/application of your choice to complete the following tasks for each part of the assignment: </li>
-    <ul>
-    <li><strong>Copy/paste</strong> the provided prompt into the AI chat.</li>
-    <li><strong>Read</strong> the response to the prompt.</li>
-    <li><strong>Complete</strong> any other steps in each of the parts of the assignment.</li>
+    <ul style="list-style-type: disc;">
+      <li><strong>Task: </strong>Complete the exercises in Google Cloud Platform (GCP) and take screenshots of your work.</li>
+      <li><strong>Purpose: </strong>Demonstrate your knowledge of GCP and other docker commands in a Linux environment.</li>
     </ul>
+
+  <h2>Instructions</h2>  
+  <ol>
+  <li><strong>Use</strong> Google Cloud Platform (GCP) and launch a docker container of your choice to complete the following tasks for each part of the assignment: </li>
   </ol>
 
   <h2>Assignment</h2>
-  <h3>Part 1: Learn about Grep</h3>
-    <p><strong>Ask your favorite AI: </strong>"Give me an easy scenario for in Intro to Linux university course that uses Grep on Ubuntu desktop."</p>
+  <h3>Part 1: Connect to Google Cloud Platform (GCP)</h3>
+    <p><strong>Connect: </strong>to the Google Cloud Platform (GCP) cloud shell at <a href="https://console.cloud.google.com/"></a>https://console.cloud.google.com/</p>
+    <p>Login with your @byui.edu email if you are not already logged in.</p>
+    <p>From the terminal, launch a simple node express app as a container by running this command:</p>
+    <code>docker run -d --name bb -p8080:8080 blaineh7/bb:1.0</code><br>
+    <p>Click on the "Web Preview" button (above the terminal) and click "Preview on Port 8080" and see the Bulletin Board Website</p>
+
       <h4>Next Steps</h4>
       <ul>
-        <li>Open your Ubuntu Linux (either AWS or local VM).</li>
-        <li>Complete the commands from the AI response in your own terminal. Ask AI if you need help.</li>
+        <li>Complete the commands and ask AI if you need help.</li>
         <li>Type your name in the scenario or terminal for identity confirmation.</li>
         <li>Take a screenshot of your work including date/time.</li>
       </ul>  
-  <h3>Part 2: Grep Part 2</h3>
-    <p><strong>Ask your favorite AI: </strong>"Help me use grep with a basic regular expression (regex) example and with my name with it."</p>  
+  <h3>Part 2: Add Your Name to Bulletin Board Website</h3>
+  <p>Back at the terminal, you can edit the index.html file within the container. To connect to the Linux Shell of the container/image, type:</p>
+  <code>docker exec -it bb bash</code><br>
+  <p>To use a text editor in the Linux shell of the image/container, update the linux packages to then install VIM:</p>
+  <code>apt update</code><br>
+  <code>apt install vim</code><br>
+  <p>Edit the index.html webpage of the Bulletin Board using VIM(VI):</p>
+  <code>vi index.html</code><br>
+  <p>Modify line 20 "Welcome to the Bulletin Board" to be:</p>
+  <p>"Welcome to {enter your name here}'s Bulletin Board"</p>
+  <p>Substituting your name in place of {enter your name here}</p>
+        <ul>
+        <li>#Now you are using VIM or VI text editor. To edit the file:</li>
+        <li>Type "i" to go into insert mode, which allows you to add text:</li>
+        <code>Press the 'i' key to enter insert mode.</code>
+        <p>Press the arrow keys on your keboard to move to line 20</p>
+        <p>Type yourname (put your actual name: ex: Bob Jones)</p>
+        <p>To exit "insert" mode in VIM, hit ESC on your keyboard.</p>
+        <p>Type ":wq". That will save (write) and quit.</p>
+        <li>If you have problems and need to save without quitting, type: ESC and then ":q!".</li>        
+      </ul>
+    <p>To get out of the bash shell inside your image/container, type "exit" and press the "etner" key on your keyboard.</p>
       <h4>Next Steps</h4>
       <ul>
-        <li>Open your Ubuntu Linux (either AWS or local VM).</li>
-        <li>Complete the commands from the AI response in your own terminal. Ask AI if you need help.</li>
+        <li>Complete the commands and ask AI if you need help.</li>
         <li>Type your name in the scenario or terminal for identity confirmation.</li>
         <li>Take a screenshot of your work including date/time.</li>
       </ul>      

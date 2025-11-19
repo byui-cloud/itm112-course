@@ -19,67 +19,83 @@
 <article>
 <div id="dp-wrapper" class="dp-wrapper">
   <div class="byui itm112">
-    <h2>Regular Expressions (Regex), Other Linux Commands, Update AWS</h2>
+    <h2>Individual BASH Project</h2>
     <ul style="list-style-type: disc;">
       <li><strong>Task: </strong>Complete the exercises and take screenshots of your work.</li>
-      <li><strong>Purpose: </strong>Demonstrate your knowledge of regex and other commands in a Linux environment.</li>
+      <li><strong>Purpose: </strong>Demonstrate your ability to create a rock, paper, scissors game in Linux using the provided script and demonstrate functionality.</li>
+      <li><strong>Purpose Part 2: </strong>Explain each line of code in a video recording and show functionality of your script.</li>
     </ul>
 
     <h2>Instructions</h2>
     <ul style="list-style-type: disc;">
-      <li><strong>Read: </strong>the Hands-on Exercise Scenarios you generate with your favorite AI using the prompts below.</li>
-      <li><strong>Complete: </strong>each part of the exercise in your Linux system (AWS or local VM).</li>
-      <li><strong>Submit: </strong>your completed deliverables for each part of the assignment by the due date.</li>
+      <li><strong>Read: </strong>the project details and look at the <a href="rps_scaffold.sh">template script file</a>.</li>
+      <li><strong>Complete: </strong>each part of the project in your Linux system (AWS or local VM).</li>
+      <li><strong>Submit: </strong>your completed deliverables for each part of the project by the due date.</li>
     </ul>    
 
-    <h2>Exercise</h2>
-      <h3>Part 1: Regular Expressions</h3>
-        <p><strong>Ask your favorite AI: </strong>"Give me an easy scenario for in Intro to Linux university course that uses Regular Expressions on Ubuntu desktop."</p>
-      <h4>Next Steps</h4>
+    <h2>Project</h2>
+      <h3>Part 1: Overview</h3>
+        <p><strong>Create </strong>a rock, paper, scissors game using the provided <a href="rps_scaffold.sh">script file</a>.</p>
+        <p><strong>Notice </strong> the TODO sections in the script that need to be completed.</p>
+        <p><strong>Submission</strong> needs to include the completed bash script file (rps.sh) that allows you to play "Rock, Paper, Scissors" against the computer. </p>
+        <p>Your script should run like this:</p>
+        <img src="../site/images/w12rps1.png" alt="Running the script and playing the game with 4 choices">
+        <img src="../site/images/w12rps2.png" alt="Game over message after playing the game">
+      <h4>Requirements</h4>
+      <p>Your bash script game should present the following set of features: </p>
       <ul>
-        <li>Open your Ubuntu Linux (either AWS or local VM).</li>
-        <li>Complete the scenario and ask AI for help as needed.</li>
-        <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-        <li>Take a screenshot of your work with the date and time.</li>
+        <li>Allows you to play Rock, Paper, Scissors against the computer</li>
+        <li>Is menu-driven</li>
+        <li>Runs continuously</li>
+        <li>Terminates when option 4 is selected</li>
+        <li>Plays according to the standard rule</li>
+        <li>Displays the same or similar messages as shown in the example output</li>
       </ul>  
+      <p>Your bash script must include the following constructs and statements: </p>
+      <ul>
+        <li>if</li>
+        <li>while</li>
+        <li>break</li>
+        <li>echo</li>
+      </ul>
 
-      <h3>Part 2: Scenario for sorts, cat, uniq, cut, paste, diff, aspell, sed, and tr</h3>
-      <p><strong>Ask your favorite AI: </strong>"Give me an easy scenario for in Intro to Linux university course that uses sorts, <code>cat</code>, <code>uniq</code>, <code>cut</code>, <code>paste</code>, <code>diff</code>, <code>aspell</code>, <code>sed</code>, <code>tr</code> on Ubuntu desktop."</p>
       <h4>Next Steps</h4>
+      <p>The scaffold script will have comments starting with TODO: You will need to finish that section of the script to meet the functionality described above.</p>
         <ul>
           <li>In your Ubuntu Linux (either AWS or local VM).</li>
-          <li>Complete the scenario and ask AI for help as needed.</li>
+          <li>Complete the project and ask AI for help as needed.</li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-          <li>Take a screenshot of your work with the date and time.</li>
         </ul>        
-      <h3>Part 3: Use diff, comm, and patch in Ubuntu desktop</h3>
-      <p><strong>Ask your favorite AI: </strong>"Give me an easy scenario for in Intro to Linux university course that uses diff, comm, and patch on Ubuntu desktop."</p>
+      <h3>Part 2: Deliverables</h3>
+      <p><strong>Part 1: </strong>Functioning script (rps.sh) with your name in the file comments</p>
+      <p><strong>Part 2: </strong>Gameplay video (you must be on video, your voice recording, and screensharing) recording and recording explaining each line of code.</p>
       <h4>Next Steps</h4>
         <ul>
-          <li>In your Ubuntu Linux (either AWS or local VM).</li>
-          <li>Complete the scenario and ask AI for help as needed.</li>
-          <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-          <li>Take a screenshot of your work with the date and time.</li>
-        </ul>  
-      <h3>Part 4: Update AWS server and ssh</h3>
-      <p><strong>Ask your favorite AI to: </strong>"Update your AWS server and ssh in with your .pem file."</p>
-      <h4>Next Steps</h4>
-        <ul>
-          <li>Start your AWS Learned Lab and turn on your instance.</li>
-          <li>Find the .pem file that you downloaded when you created your AWS server (it is probably in your download folder)</li>
-          <li>In your Mac/Apple terminal or in your Windows PowerShell terminal, ssh into your AWS Ubuntu Linux (AWS must be used and you need to ssh in with your .pem).</li>
-          <li>'cd' into the folder where your .pem file is located.</li>
-          <li>If you are on a Mac/Apple, you might need to use the 'chmod' command to change the permissions on the .pem file.</li>
-          1. Example: <code>chmod 400 yourkeyfile.pem</code>
-          <li>Use the ssh command to connect to your AWS server. </li>
-          2.  Example: <code>ssh -i "UbuntuDCV-101.pem" ubuntu@ec2-42-252-172-18.us-west-2.compute.amazonaws.com</code>
-          <li>Complete the scenario and ask AI for help as needed.</li>
-          <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
-          <li>Take a screenshot of your work with the date and time.</li>
-        </ul>  
- 
+          <li>Upload your bash script (rps.sh) through Canvas. </li>
+          <li>Record a screencast video of your “Rock, Paper, Scissors” game playing. </li>
+          <li>Your voice must be understandable and recognizable.</li>
+          <li>Your face is recogniable on the video recording.</li>
+          <li>Talk through the logic of all the lines of the script to show you understand what your script is doing.</li>
+          <li>Gameplay recording includes all four choices you can make (1. Rock, 2. Paper, 3. Scissors, 4. Done).</li>  
+          <li>Demonstrate your bash script will correctly produce three outcomes that are possible (You won, You lost, You tied). </li>
+          <li>Your demonstration of the correct outcome need not be exhaustive. Just one instance of a win, one instance of loss, and one instance of a tie will do.</li>
+        </ul>   
+      <h3>Part 3: Rules</h3>
+      <ul>
+        <li>You may use any resources you like, including AI tools, to help you complete this assignment.</li>
+        <li>You must understand and be able to explain all parts of your submission.</li>
+        <li>Your submission must be done individually and your own work. If you use AI, you can, just cite it.</li>
+        <li>You cannot work with another classmate to complete the assignment.</li>
+        <li>You can reach out to the instructor or TA if you need help.</li>
+        <li>You should try to do this first without referring to other sources.</li>
+        <li>If you do use other resources, please share the specifics of what resources you used and how you used them in the video.</li>
+        <li>You will not be penalized for using resources if you explain which resources you used and how you incorporated them into your script.</li>
+        <li>Failing to indicated what resources you used could be conisdered cheating or if you do not follow the assignment instructions properly by using someone else's work without citing it.</li>
+
+      </ul>
+      <p>            The scaffolded shell script should not be changed other than adding to the TODO: code you write.  Meaning, do not change the names of the functions or rewrite existing code. Changing the scaffold script will indicate that you did not work through the assignment as described above. </p>
   <h2>Submission</h2>
-  <p>Submit one document with your screenshots from the excercise scenarios above that have your name and the date/time in pictures.</p>
+  <p>Submit rps.sh file created and your video walkthrough of the code line-by-line and a demonstration of the 4 options of the script working.</p>
   </div>
 </div>
 </article>

@@ -89,6 +89,28 @@
                 <li>Install Ubuntu Desktop </li>
               </ol>
             </li>
+            <li><strong>Add Copy/Paste Functionality</strong></li>
+            <ol>
+              <li>Start the virtual machine.</li>
+                <li>Once the guest OS has fully booted and you are logged in, click on the Devices menu in the running VM's window top menu bar.</li>
+                <li>Select Insert Guest Additions CD image.... This action virtually inserts an installation ISO file into the VM's CD drive.</li>
+                <li>Inside the guest VM, an installation prompt may appear automatically. If so, follow the prompts to install, accepting default options.</li>
+                <li>If the installation doesn't start automatically (common in some Linux guests), navigate to "This PC" or "Computer" within the guest file explorer, open the virtual CD drive (labeled VBox_GAs_...), and run the installer file (e.g., VBoxWindowsAdditions.exe for Windows guests, or the appropriate script for Linux/macOS).</li>
+                <li>Follow the installation steps. The screen might flicker briefly during driver installation (this is normal).</li>
+                <li>Once the installation is complete, restart the virtual machine for the changes to take full effect. </li>
+<ul>
+  <li>Open the VirtualBox Manager application on your host PC.</li>
+  <li>Select the desired virtual machine from the list.</li>
+  <li>Click the Settings (yellow cog icon) button in the toolbar.</li>
+  <li>In the Settings dialog box, select the General category in the left pane.</li>
+  <li>Go to the Advanced tab on the right.</li>
+  <li>Find the Shared Clipboard dropdown menu and select <strong>Bidirectional</strong>.</li>
+  <li>(Optional) For easier file transfers, also set the Drag'n'Drop dropdown to <strong>Bidirectional</strong>.</li>
+  <li>Click OK to save the changes and close the settings.</li>
+</ul>
+
+            </ol>
+
           </ol>
           <p><strong>Stuck? Want detailed instructions? </strong></p>
           <p>Follow these details: <strong><a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on VirtualBox 2025" href="https://byui.instructure.com/courses/356898/files/151134004?wrap=1" target="_blank" rel="noopener" data-canvas-previewable="false" data-api-endpoint="https://byui.instructure.com/api/v1/courses/356898/files/151134004" data-api-returntype="File">How to Install Ubuntu Desktop on VirtualBox 2025.pdf</a></strong></p>
@@ -135,8 +157,8 @@
             </li>
             <li><strong>Download and install Virtual Box or UTM. Pick ONE.</strong>
               <ul>
-                <li>VIRTUAL BOX: Find the Download for your chip type (macOS / Apple Silicon hosts for M Chips): <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
-                <li>UTM: Click on "Download" at the following link to install the software: <a class="inline_disabled" href="https://mac.getutm.app/" target="_blank" rel="noopener">GetUTM</a>.</li>
+                <li>(Recommended) VIRTUAL BOX: Find the Download for your chip type (macOS / Apple Silicon hosts for M Chips or Intel hosts for Intel Chips): <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
+                <li>(Not required but another option if Virtual Box doesn't work) UTM: Click on "Download" at the following link to install the software: <a class="inline_disabled" href="https://mac.getutm.app/" target="_blank" rel="noopener">GetUTM</a>.</li>
               </ul>
             </li>
             <li><strong>Download Ubuntu Desktop for ARM Architecture.</strong>
@@ -144,30 +166,49 @@
                 <li>Download the 64-bit ARM desktop image at the following link: <a class="inline_disabled" href="https://cdimage.ubuntu.com/daily-live/20240421" target="_blank" rel="noopener">Ubuntu ARM Desktop Image (GET THE ARM ONE: </a><a href="https://cdimage.ubuntu.com/daily-live/20240421/noble-desktop-arm64.iso">noble-base-arm64.iso</a><a class="inline_disabled" href="https://cdimage.ubuntu.com/ubuntu-base/noble/daily/current" target="_blank" rel="noopener">)</a>.</li>
               </ul>
             </li>
-            <li><strong>Create a VM on UTM and install Ubuntu. </strong></li>
-            <li>Follow steps on screen for the installation with the following modifications:
+            <li><strong>Create a VM on Virtual box or UTM and install Ubuntu. </strong></li>
+            <li><strong>Follow steps on screen for the installation with the following modifications:</strong>
               <ol>
                 <li>Memory: 4 GB (4096 MB) (Ubuntu Desktop Requirement) </li>
                 <li>Disk: 25 GB (25000 MB) (Ubuntu Desktop recommended)</li>
                 <li>Install Ubuntu Desktop </li>
               </ol>
             </li>
-            <li>Black screen on UTM with Mac/Apple M chips?
-              <ol>
-                <li>Try this: Choose Virtualize (not emulate). Install Ubuntu. Then change the There is an issue with the graphics drivers. Go to your VM Setting -> Display. Then Change <code>Emulated Display Card</code> to virtio-ramfb or virtio-gpu-pci. You might need to click on the icon in the top right corner once you have the VM selected. Go do Display and click the drop down and change from either virtio-ramfb or to this virtio-gpu-pci.</li>
-              </ol>
-            </li>
+            <li><strong>Add Copy Paste Virtual Box (Highly Recommended):</strong>
+                      
+          <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br />
+            <p>Open the terminal in your VM and type these commands:</p>
+            cd /media<br />ls<br />cd user<br />ls<br />cd VBox_GAs_7.1.8/<br />ls<br />./autorun.sh <br />sudo apt update<br />sudo apt install bzip2 tar<br />sudo apt install gcc make perl<br />./autorun.sh <br />sudo reboot<br /><br />On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
+            </strong></li>
+           <li><strong>Enable Copy Paste Virtual Box:</strong>
+          <ul>
+            <li>Open the VirtualBox Manager application on your host PC.</li>
+            <li>Select the desired virtual machine from the list.</li>
+            <li>Click the Settings (yellow cog icon) button in the toolbar.</li>
+            <li>In the Settings dialog box, select the General category in the left pane.</li>
+            <li>Go to the Advanced tab on the right.</li>
+            <li>Find the Shared Clipboard dropdown menu and select <strong>Bidirectional</strong>.</li>
+            <li>(Optional) For easier file transfers, also set the Drag'n'Drop dropdown to <strong>Bidirectional</strong>.</li>
+            <li>Click OK to save the changes and close the settings.</li>
+          </ul>
           </ol>
+
+
+          
           <p><strong>Stuck? Want detailed instructions? </strong></p>
           <p>Follow these details for Virtual Box: <a class="inline_disabled" href="https://docs.google.com/document/d/1JxKeR2Z07LFrNBiz-U_IG1PSBKFZ6yHy/edit" target="_blank" rel="noopener">How to Install Ubuntu Desktop on Virtual Box on MAC 2025</a></p>
           <p>Follow these details for UTM: <a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025.pdf" href="https://docs.google.com/document/d/1b2I9qjtqyB8arFPpXVAf5JHIYL84ewMr6lDpUUGA3hM/edit?tab=t.0" target="_blank" rel="noopener" data-canvas-previewable="false" data-api-endpoint="https://byui.instructure.com/api/v1/courses/336300/files/147719742" data-api-returntype="File">How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025.pdf</a> </p>
-          <p><strong>Still stuck and want an older version:</strong></p>
+          <p><strong>Still stuck and want an older version:</strong></p>          
           <ol>
             <li><strong></strong>If you get stuck or have issues, go to the following link and select "Ubuntu [<em>release number]</em> ARM 64": <a class="inline_disabled" href="https://mac.getutm.app/gallery" target="_blank" rel="noopener">GetUTM</a> or download the latest version of Ubuntu LTS (20.04 should work for sure).</li>
             <li><a class="inline_disabled" href="https://video.byui.edu/media/t/1_73p9g20q?st=46&ed=980" target="_blank" rel="noopener">Installing VirtualBox and Ubuntu on older Macs</a></li>
           </ol>
-          <p><strong>Copy Paste Virtual Box:</strong></p>
-          <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br /><br />cd /media<br />ls<br />cd user<br />ls<br />cd VBox_GAs_7.1.8/<br />ls<br />./autorun.sh <br />sudo apt update<br />sudo apt install bzip2 tar<br />sudo apt install gcc make perl<br />./autorun.sh <br />sudo reboot<br /><br />On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
+          <p>UTM issues?</p>
+          <ol>
+                <li>Black screen on UTM with Mac/Apple M chips?</li>
+                <li>Try this: Choose Virtualize (not emulate). Install Ubuntu. Then change the There is an issue with the graphics drivers. Go to your VM Setting -> Display. Then Change <code>Emulated Display Card</code> to virtio-ramfb or virtio-gpu-pci. You might need to click on the icon in the top right corner once you have the VM selected. Go do Display and click the drop down and change from either virtio-ramfb or to this virtio-gpu-pci.</li>
+          </ol>
+
         </div>
       </details>
 

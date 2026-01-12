@@ -110,9 +110,9 @@
       <h3>Part 4: Modify the default webpage to have your name on it</h3>
       <ul>
         <li>Modify the index file that was created when you installed NGINX in /var/www/html.</li>
-        <li>In the VM or AWS terminal, type:</li>
-        <code>sudo gedit /var/www/html/index.html</code>
-        <li>Type your name in the file so it shows on the Firefox browser page you opened above. Put your name and save it. Click refresh on the browser.</li>
+        <li>In the VM or AWS terminal, type (But replace YOUR NAME with your real name):</li>
+        <code>sudo sed -i 's|</h1>|</h1>\n<p>YOUR NAME</p>|' /var/www/html/index.nginx-debian.html</code>
+        <li>Make sure you put your name in the command above so it shows your name in the browser page you opened above. Put your name and save it. Click refresh on the browser.</li>
         <li>Alternatively, you can have AI generated HTML/CSS/Javascript into one file to create your own custom webpage about your favorite hobby or a portfolio webpage about you.</li>  
         <li>Take a screenshot.</li>
       </ul>

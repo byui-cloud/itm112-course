@@ -64,7 +64,7 @@
         <details class="dp-panel-group" id="pc-instructions">
           <summary class="dp-panel-heading">AWS (recommended)</summary>
           <div class="dp-panel-content">
-            <p><span>Log into <a href="https://awsacademy.instructure.com/">https://awsacademy.instructure.com/</a>, go to "Modules", click "Learner Lab", start the learner lab, click the green AWS button, make sure you are in the correct region, search for EC2, find your instance, click "Instance State" > "Start instance", open your https://{your instance IP address}:8443. Login to your DC Viewer with your username and password.
+            <p><span>Log into <a href="https://awsacademy.instructure.com/">https://awsacademy.instructure.com/</a>, go to "Modules", click "Learner Lab", start the learner lab, click the green AWS button, make sure you are in the correct region, search for EC2, find your instance, click "Instance State" > "Start instance", check the box next to the instance, click the "Connect" button at the top right, click the "Connect" button in the bottom right.
             </span></p>         
           </div>
         </details>
@@ -88,8 +88,17 @@
         </ul>        
       <h3>Part 3: View your new website installed with your NGINX webserver.</h3>
         <ul>
-          <li>Open Firefox inside of AWS or inside your local VM (not on your laptop).</li>
-          <li>Go to the URL (this loads the local server/computer webpage): http://localhost/</li>
+          <li>(AWS) Open your browser on your laptop/computer and go to your AWS public IP address of your server using http (not https).
+            <ul>
+              <li>In AWS, find your PublicIP address at the bottom of your Window next to YourNameLinux Server. It should be something similar to this style: 35.249.43.99</li>
+            </ul>
+          </li>            
+          <li>(Local VM) In your local VM, you can use the localhost address
+             or inside your local VM (not on your laptop).
+             <ul>
+              <li>Go to the URL (this loads the local server/computer webpage): http://localhost/</li>
+             </ul>
+          </li>
           <li>Make sure not to put https, it is http without the 's'.</li>
           <li>You should see the NGINX welcome page.</li>
           <li>If that doesn't work, try http://127.0.0.1/ instead.</li>
@@ -103,9 +112,9 @@
         <li>Alternatively, you can have AI generated HTML/CSS/Javascript into one file to create your own custom webpage about your favorite hobby or a portfolio webpage about you.</li>  
         <li>Take a screenshot.</li>
       </ul>
-      <h3>Part 5 (Optional But Really Cool): Make your webserver work outside your VM</h3>
+      <h3>Troubleshooting AWS</h3>
         <ul>
-          <li>Get the website working in the real-world not just on the localhost.</li>
+          <li>Webpage isn't working or loading in AWS</li>
           <li>In AWS, go to your EC2 instance and select it, then under the security tab, click "Security Groups", click the security group link, click "Edit inbound rules", click "Add rule", select "HTTP" from the dropdown, click "Save rules".</li>
           <li>For the inbound source rules (use CIDR 0.0.0.0/0).</li>
           <li>Find your public IPv4 address of your instance in the AWS EC2 dashboard
@@ -116,6 +125,12 @@
               <li>You should see your webpage with your name on it.</li>
               <li>Take a screenshot.</li>
             </ul>
+          </li>
+          <li>If you still can't access your webpage, check the following:</li>
+          <ul>
+            <li>Ensure your EC2 instance is running.</li>
+            <li>Check the NGINX service status by running <code>sudo systemctl status nginx</code> in your VM after you connect to it.</li>
+          </ul>
         </ul>
       <hr />
       <h3>Extra Mile</h3>

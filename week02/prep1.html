@@ -91,7 +91,7 @@
               </ol>
             </li>
             <li><strong>Add Copy/Paste Functionality</strong></li>
-            <ol>
+            <li><ol>
               <li>Start the virtual machine.</li>
                 <li>Once the guest OS has fully booted and you are logged in, click on the Devices menu in the running VM's window top menu bar.</li>
                 <li>Select Insert Guest Additions CD image.... This action virtually inserts an installation ISO file into the VM's CD drive.</li>
@@ -99,21 +99,22 @@
                 <li>If the installation doesn't start automatically (common in some Linux guests), navigate to "This PC" or "Computer" within the guest file explorer, open the virtual CD drive (labeled VBox_GAs_...), and run the installer file (e.g., VBoxWindowsAdditions.exe for Windows guests, or the appropriate script for Linux/macOS).</li>
                 <li>Follow the installation steps. The screen might flicker briefly during driver installation (this is normal).</li>
                 <li>Once the installation is complete, restart the virtual machine for the changes to take full effect. </li>
-            </ol>      
-<ul>
-  <li>Open the VirtualBox Manager application on your host PC.</li>
-  <li>Select the desired virtual machine from the list.</li>
-  <li>Click the Settings (yellow cog icon) button in the toolbar.</li>
-  <li>In the Settings dialog box, select the General category in the left pane.</li>
-  <li>Go to the Advanced tab on the right.</li>
-  <li>Find the Shared Clipboard dropdown menu and select <strong>Bidirectional</strong>.</li>
-  <li>(Optional) For easier file transfers, also set the Drag'n'Drop dropdown to <strong>Bidirectional</strong>.</li>
-  <li>Click OK to save the changes and close the settings.</li>
-</ul>
+            </ol></li>   
+            </ol>               
+              <ul>
+                <li>Open the VirtualBox Manager application on your host PC.</li>
+                <li>Select the desired virtual machine from the list.</li>
+                <li>Click the Settings (yellow cog icon) button in the toolbar.</li>
+                <li>In the Settings dialog box, select the General category in the left pane.</li>
+                <li>Go to the Advanced tab on the right.</li>
+                <li>Find the Shared Clipboard dropdown menu and select <strong>Bidirectional</strong>.</li>
+                <li>(Optional) For easier file transfers, also set the Drag'n'Drop dropdown to <strong>Bidirectional</strong>.</li>
+                <li>Click OK to save the changes and close the settings.</li>
+              </ul>
 
-            </ol>
 
-          </ol>
+
+
           <p><strong>Stuck? Want detailed instructions? </strong></p>
           <p>Follow these details: <strong><a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on VirtualBox 2025" href="https://docs.google.com/document/d/1io5pHFzUwkuzC5I7Qe2ojvWq1jPE5E8n/edit?usp=sharing&ouid=112147885706036646597&rtpof=true&sd=true" target="_blank" rel="noopener" data-canvas-previewable="false">How to Install Ubuntu Desktop on VirtualBox 2025</a></strong></p>
           <p><strong>Videos that might help:</strong></p>
@@ -179,8 +180,8 @@
             <li><strong>Add Copy Paste Virtual Box (Highly Recommended):</strong>
           <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br>
             <p>Open the terminal in your VM and type these commands:</p>
-            cd /media<br>ls<br>cd user<br>ls<br>cd VBox_GAs_7.1.8/<br>ls<br>./autorun.sh <br>sudo apt update<br>sudo apt install bzip2 tar<br>sudo apt install gcc make perl<br>./autorun.sh <br>sudo reboot<br><br>On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
-            </strong></li>
+            cd /media<br>ls<br>cd user<br>ls<br>cd VBox_GAs_7.1.8/<br>ls<br>./autorun.sh <br>sudo apt update<br>sudo apt install bzip2 tar<br>sudo apt install gcc make perl<br>./autorun.sh <br>sudo reboot<br><br>On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”
+            </li>
            <li><strong>Enable Copy Paste Virtual Box:</strong>
           <ul>
             <li>Open the VirtualBox Manager application on your host PC.</li>
@@ -194,8 +195,6 @@
           </ul>
           </ol>
 
-
-          
           <p><strong>Stuck? Want detailed instructions? </strong></p>
           <p>Follow these details for Virtual Box: <a class="inline_disabled" href="https://docs.google.com/document/d/1JxKeR2Z07LFrNBiz-U_IG1PSBKFZ6yHy/edit" target="_blank" rel="noopener">How to Install Ubuntu Desktop on Virtual Box on MAC 2025</a></p>
           <p>Follow these details for UTM: <a class="instructure_file_link instructure_scribd_file inline_disabled" title="How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025" href="https://docs.google.com/document/d/1b2I9qjtqyB8arFPpXVAf5JHIYL84ewMr6lDpUUGA3hM/edit?tab=t.0" target="_blank" rel="noopener" data-canvas-previewable="false">How to Install Ubuntu Desktop on UTM on MAC with Apple CPU 2025</a> </p>
@@ -215,7 +214,6 @@
 
     </div>
 
-    <hr />
     <h2>Submission</h2>
     <ol>
       <li>Complete the appropriate steps to install Ubuntu on either Virtual Box (PC) or UTM (Mac/Apple) on your computer.</li>

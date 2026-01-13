@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" href="../site/logo.png">
     <link rel="canonical" href="https://byui-cloud.github.io/itm112-course/week02/prep1.html">
     <meta name="description" content="Week 2 prep assignment instructions for the BYU-Idaho ITM 112 Introduction to Linux course">
-</head>
 <style>
   /* optional: make it look like your current panels */
   .dp-panels-wrapper details {
@@ -46,6 +45,8 @@
     border-top: 1px solid #eee;
   }
 </style>
+  </head>
+
 <body>
 
 <article>
@@ -56,7 +57,7 @@
       <li><strong>Task: </strong>Download the needed software and run Linux on a virtual machine on your computer.</li>
       <li><strong>Purpose: </strong>You need this software and Linux running as we will be using it throughout the course.</li>
     </ul>
-    <hr />
+    <hr>
     <p>Please contact the TA or instructor if you have any questions or encounter any problems during installation. Additionally, you can also Google any errors you get or use AI to help you. Click on the PC or Mac instructions below.</p>
 
     <div class="dp-panels-wrapper dp-expander-plus">
@@ -98,6 +99,7 @@
                 <li>If the installation doesn't start automatically (common in some Linux guests), navigate to "This PC" or "Computer" within the guest file explorer, open the virtual CD drive (labeled VBox_GAs_...), and run the installer file (e.g., VBoxWindowsAdditions.exe for Windows guests, or the appropriate script for Linux/macOS).</li>
                 <li>Follow the installation steps. The screen might flicker briefly during driver installation (this is normal).</li>
                 <li>Once the installation is complete, restart the virtual machine for the changes to take full effect. </li>
+            </ol>      
 <ul>
   <li>Open the VirtualBox Manager application on your host PC.</li>
   <li>Select the desired virtual machine from the list.</li>
@@ -175,10 +177,9 @@
               </ol>
             </li>
             <li><strong>Add Copy Paste Virtual Box (Highly Recommended):</strong>
-                      
-          <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br />
+          <p>Mount the Guest additions CD: Click on “Devices” menu > Insert Guest Additions CD image.<br>
             <p>Open the terminal in your VM and type these commands:</p>
-            cd /media<br />ls<br />cd user<br />ls<br />cd VBox_GAs_7.1.8/<br />ls<br />./autorun.sh <br />sudo apt update<br />sudo apt install bzip2 tar<br />sudo apt install gcc make perl<br />./autorun.sh <br />sudo reboot<br /><br />On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
+            cd /media<br>ls<br>cd user<br>ls<br>cd VBox_GAs_7.1.8/<br>ls<br>./autorun.sh <br>sudo apt update<br>sudo apt install bzip2 tar<br>sudo apt install gcc make perl<br>./autorun.sh <br>sudo reboot<br><br>On the Virtual Box Manager application, click on “settings” on the VM selected. Click on “Advanced” tab and under “Shared Clipboard” click “Bidirectional”</p>
             </strong></li>
            <li><strong>Enable Copy Paste Virtual Box:</strong>
           <ul>

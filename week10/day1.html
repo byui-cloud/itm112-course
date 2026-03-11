@@ -61,6 +61,7 @@
         </ul>  
 
       <h3>Part 4: Create AWS SMB File Server and Connect</h3>
+      <p>First, open the security port for SMB to access it over yhe internet (don't do this in the real world for security reasons. In your AWS EC2, select your Linux instance, click on the Security group tab below it, and click on the name of the blue underlined security group, click the 'Edit inbound Rules' button, click 'Add Rule', in the 'Port' field type '445', in the Source field type '0.0.0.0/0' for thr CIDR, click 'Save Rules.'</p>
       <p><strong>Complete 4 Part Tutorial: </strong><a href="https://ubuntu.com/tutorials/install-and-configure-samba#1-overview">Ubuntu Samba Share</a></p>
       <h4>Next Steps</h4>
         <ul>

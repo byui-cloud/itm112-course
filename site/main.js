@@ -56,7 +56,7 @@ itm112.strings = {
 	downloadText : 'Download',
 
 	modified : 'Last modified',
-	copyrightNotice : 'Copyright © 2025 Brigham Young University–Idaho. All rights reserved.'
+	copyrightNotice : 'This work is licensed under a Creative Commons Attribution.'
 };
 
 

@@ -21,6 +21,7 @@
 
    <h2>Overview</h2>
     <ul style="list-style-type: disc;">
+      <li><strong>Watch: </strong><a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/ch06s03">Installing Software Via Terminal</a></li>   
       <li><strong>Task: </strong>Complete the exercises in Google Cloud Platform (GCP) and take screenshots of your work.</li>
       <li><strong>Purpose: </strong>Demonstrate your knowledge of GCP and other docker commands in a Linux environment.</li>
     </ul>
@@ -34,6 +35,8 @@
   <h3>Part 1: Connect to Google Cloud Platform (GCP)</h3>
     <p><strong>Connect: </strong>to the Google Cloud Platform (GCP) cloud shell at <a href="https://console.cloud.google.com/"></a>https://console.cloud.google.com/</p>
     <p>Login with your @byui.edu email if you are not already logged in.</p>
+    <p>Click on the "Activate Cloud Shell" button (top right of the screen) to open a terminal window.</p>
+    <img src="../site/images/w9cloudshell.png" alt="activate cloud shell screenshot"><br>
     <p>From the terminal, launch a simple node express app as a container by running this command:</p>
     <code>docker run -d --name bb -p8080:8080 blaineh7/bb:1.0</code><br>
     <p>Click on the "Web Preview" button (above the terminal) and click "Preview on Port 8080" and see the Bulletin Board Website</p>
@@ -46,11 +49,12 @@
         <li>Take a screenshot of your work including date/time.</li>
       </ul>  
   <h3>Part 2: Add Your Name to Bulletin Board Website</h3>
-  <p>Back at the terminal, you can edit the index.html file within the container. To connect to the Linux Shell of the container/image, type:</p>
+  <p>Back at the terminal, you can edit the index.html file within the container. To connect to the Linux Shell of the docker container/image, type (this starts an interactive terminal {-it} bash script and bb is the name of the container):</p>
   <code>docker exec -it bb bash</code><br>
   <p>To use a text editor in the Linux shell of the image/container, update the linux packages to then install VIM:</p>
   <code>apt update</code><br>
   <code>apt install vim</code><br>
+  <p>'apt' is the package manager for Debian-based Linux distributions to install packages/apps/software on this distro, but in other distros, you might use 'dnf' (like you might have seen in RedHat videos) or 'yum' to install a package.</p>
   <p>Edit the index.html webpage of the Bulletin Board using VIM(VI):</p>
   <code>vi index.html</code><br>
   <p>Modify line 20 "Welcome to the Bulletin Board" to be:</p>

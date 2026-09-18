@@ -21,7 +21,8 @@
 
    <h2>Overview</h2>
     <ul style="list-style-type: disc;">
-      <li><strong>Watch: </strong><a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/ch06s03">Installing Software Via Terminal</a></li>   
+      <li><strong>Watch: </strong><a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/ch06s03">Installing Software Via Terminal</a></li>  
+      <li><strong>Watch: </strong><a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/ch07">Networking Commands</a></li>   
       <li><strong>Task: </strong>Complete the exercises in Google Cloud Platform (GCP) and take screenshots of your work.</li>
       <li><strong>Purpose: </strong>Demonstrate your knowledge of GCP and other docker commands in a Linux environment.</li>
     </ul>
@@ -71,6 +72,15 @@
         <li>If you have problems and need to save without quitting, type: ESC and then ":q!".</li>        
       </ul>
     <p>To get out of the bash shell inside your image/container, type "exit" and press the "etner" key on your keyboard.</p>
+    <p>To see the changes you made to the index.html file, click on the "Web Preview" button (above the terminal) and click "Preview on Port 8080" and see the Bulletin Board Website</p>
+    <p>Practice a 'ping' to confirm the network is working (8.8.8.8 is Google's DNS server):</p>
+    <code>ping 4 8.8.8.8</code><br>
+    <p>Practice a 'traceroute' to see the path packets take to reach a destination:</p>
+    <code>traceroute 8.8.8.8</code><br>
+    <p>Practice a 'nslookup' to see the IP address of a domain name (you could put 8.8.8.8 instead too):</p>
+    <code>nslookup google.com</code><br>
+    <p>Check your network configuration (or short form 'ip a'):</p>
+    <code>ip addr show</code><br>
       <h4>Next Steps</h4>
       <ul>
         <li>Complete the commands and ask AI if you need help.</li>

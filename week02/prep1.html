@@ -57,7 +57,7 @@
     <ol>
       <li><strong>If you haven't yet, create a RedHat Account with your BYUI email: </strong><a href="https://rha.ole.redhat.com/">RedHat Account Website</a></li>    
       <ul><li><h4>If your BYUI email is van373775@byui.edu then you need to create your red hat id username as van373775 or else you won't have access.</h4></li></ul>      
-      <li>Login to the <a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/pr01s02" target="_blank" rel="noopener">RedHat Academy</a> and set up your environment.</li>
+      <li>Login to the <a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/pr01s02" target="_blank" rel="noopener">RedHat Academy</a> and make sure you have access to the videos (see link below in the Watch: Red Hat Linux Setup).</li>
       <li>All RedHat Academy student computer systems have a standard user account, student, which uses the password 'student'. The root user password on all student systems is 'redhat'.
 </li>
     </ol>
@@ -65,7 +65,7 @@
     <h2>Local Linux Install</h2>
     <ul style="list-style-type: disc;">
       <li><strong>Watch: </strong><a href="https://rha.ole.redhat.com/rha/app/courses/rh104-9.1/pages/pr01s02" target="_blank" rel="noopener">Red Hat Linux Setup</a></li>
-      <li><strong>Task: </strong>Download the needed software and run Linux on a virtual machine on your local computer.</li>
+      <li><strong>Task: </strong>Download the needed software and run Linux on a virtual machine on your local computer. Click on the PC or Mac instructions below.</li>
       <li><strong>Purpose: </strong>You need this software and Linux running as we will be using it throughout the course.</li>
     </ul>
     <hr>
@@ -75,7 +75,7 @@
 
       <!-- PC -->
       <details class="dp-panel-group" id="pc-instructions">
-        <summary class="dp-panel-heading">Instructions for PC</summary>
+        <summary class="dp-panel-heading">Instructions for PC/Windows (not SnapDragon processors)</summary>
         <div class="dp-panel-content">
           <!-- your existing PC content unchanged -->
           <p><span>If you have a MacBook/Apple computer, skip to the next section of these instructions.</span></p>
@@ -159,7 +159,7 @@
 
       <!-- Mac -->
       <details class="dp-panel-group" id="mac-instructions">
-        <summary class="dp-panel-heading">Instructions for Mac</summary>
+        <summary class="dp-panel-heading">Instructions for Mac/Apple (not Apple Neo laptops)</summary>
         <div class="dp-panel-content">
           <!-- your existing Mac content unchanged -->
           <p>If you have a computer with an Apple CPU (Specifically the M1, M2, M3, M4, etc. chip), follow the instructions below. If you have an Apple CPU with Intel, you could try the instructions below but you may need modify some settings or use the <a class="inline_disabled" href="https://video.byui.edu/media/t/1_73p9g20q?st=46&ed=980" target="_blank" rel="noopener">Virtual Box Install Method</a> at the bottom of the page.</p>
@@ -223,12 +223,39 @@
         </div>
       </details>
 
+       <!-- Other Systems -->
+      <details class="dp-panel-group" id="snap-instructions">
+        <summary class="dp-panel-heading">Instructions for Neo and SnapDragon Processors</summary>
+        <div class="dp-panel-content">
+          <!-- your snap -->
+          <p>If you have an Apple Neo laptop or a SnapDragon processor, Virtual Box or UTM may not work as expected.</p>
+          <ol>
+            <li><strong>Verify that you have a SnapDragon processor or Apple Neo laptop (ask AI if needed).</strong>
+            </li>
+            <li><strong>Download and install Virtual Box or UTM from the Windows or Mac instructions above, but know that it might not work. Don't spend too much time on it if it doesn't work.</strong>
+              <ul>
+                <li>If you can't get UTM or Virtual Box to install or to use the .iso file to install Linux, continue to the next prepare assignment to set up your AWS Account in the cloud</li>
+                <li>You will use the AWS or RedHat Linux systems instead for your assignments.</li>
+              </ul>
+            </li>
+            <li><strong>Sign in to the <a href="https://rha.ole.redhat.com/" target="_blank" rel="noopener">RedHat Academy</a>. </strong></li>
+            <li>In the RedHat Academy, click on the Getting Started with Linux Fundamentals course and then click on the "Lab Environment" tab.</li>
+            <li>Click on the "Start Lab" button to launch the lab environment.</li>
+            <li>Once the lab environment is launched, you will have access to a virtual machine running RedHat Linux. You can use this virtual machine to complete your assignments and practice Linux commands.</li>
+            <li>Make sure to take screenshots of your work in the RedHat Academy lab environment to submit as part of your assignments.</li>
+          </ol>
+
+
+        </div>
+      </details>
+
     </div>
 
     <h2>Submission</h2>
     <ol>
-      <li>Complete the appropriate steps to setup RedHat in the Academy and install Ubuntu on either Virtual Box (PC) or UTM (Mac/Apple) on your computer. Type your name in the terminals for identity verification.</li>
-      <li>Submit two screenshots: one of the RedHat system and one of your desktop with Ubuntu running on your computer's virtual application or where you are stuck.</li>
+      <li>Complete the appropriate steps to install Ubuntu on either Virtual Box (PC) or UTM (Mac/Apple) on your computer. Type your name in the terminals for identity verification and take a screenshot.</li>
+      <li>Sign into the RedHat Academy and make sure you have access to the videos for "Getting Started with Linux Fundamentals" and take a screenshot of it. </li>
+      <li>Submit two screenshots: one of your desktop with Ubuntu running on your computer's virtual application or where you are stuck and a screenshot of the RedHat videos working.</li>
     </ol>
   </div>
 </div>

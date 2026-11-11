@@ -65,6 +65,10 @@
         <p>Type ":wq". That will save (write) and quit.</p>
         <li>If you have problems and need to save without quitting, type: ESC and then ":q!".</li>        
       </ul>
+      <p>Edit the Dockerfile:</p>
+      <code>vi Dockerfile</code><br>
+      <p>Inside the vi text editor, remove the part that says --lboost_system</p>
+      <p>Save the file and quit the editor (ESC :wq)</p>
       <p>Build the C++ docker container/image:</p>
       <code>docker compose up --build</code><br>
       <p>When you see this message: "Listening on: http://0.0.0.0:8080/" it is running</p>

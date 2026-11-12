@@ -39,9 +39,11 @@
     <p>Click on the "Activate Cloud Shell" button (top right of the screen) to open a terminal window.</p>
     <img src="../site/images/w9cloudshell.png" alt="activate cloud shell screenshot"><br>
     <p>From the terminal, launch a simple node express app as a container by running this command:</p>
-    <code>docker run -d --name bb -p8080:8080 blaineh7/bb:1.0</code><br>
-    <p>Click on the "Web Preview" button (above the terminal) and click "Preview on Port 8080" and see the Bulletin Board Website</p>
+    <code>docker run -d --name bb -p8081:8080 blaineh7/bb:1.0</code><br>
+    <p>Click on the "Web Preview" button (above the terminal) and click on 'Change Port'</p>
     <img src="../site/images/w9webpreview.png" alt="preview on port 8080 screenshot of button"><br>
+    <p>Change the port to 8081 and click "Change and Preview"</p>
+    <p>In your browser, you should see the Bulletin Board Website</p>
 
       <h4>Next Steps</h4>
       <ul>
@@ -87,6 +89,15 @@
         <li>Type your name in the scenario or terminal for identity confirmation.</li>
         <li>Take a screenshot of your work including date/time.</li>
       </ul>      
+
+      <h3>Troubleshooting</h3>
+      <p>If you encounter any issues, try the following:</p>
+      <ul>
+        <li>Check that your container is running: <code>docker ps</code></li>
+        <li>Check the logs of your container: <code>docker logs bb</code></li>
+        <li>Ensure the correct port is being used for the web preview.</li>
+        <li>If you have issues with this docker container and the other docker containers, click on the three dots near the right of the web preview button and click "Resart" and then try installing it again.</li>
+      </ul>
 
   <h2>Submission</h2>
     <p>Submit your screenshots in one document by the due date.</p>

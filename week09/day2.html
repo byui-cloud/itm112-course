@@ -79,7 +79,17 @@
           <li>In GCP, complete the scenario and ask AI for help as needed.</li>
           <li>Make sure your name is in the scenario or terminal for identity confirmation.</li>
           <li>Take a screenshot of your work with the date and time.</li>
-        </ul>        
+        </ul>    
+
+      <h3>Troubleshooting</h3>
+      <p>If you encounter any issues, try the following:</p>      
+        <ul>
+        <li>Check that your container is running: <code>docker ps</code></li>
+        <li>Check the logs of your container: <code>docker logs c-plus-plus-docker-ok-api-1</code></li>
+        <li>Ensure the correct port is being used for the web preview.</li>
+        <li>If you have issues with this docker container and the other docker containers, click on the three dots near the right of the web preview button and click "Resart" and then try installing it again.</li>
+      </ul>
+
       <h3>Part 3: Extra Mile</h3>
       <p><strong>Find: </strong>the Linux version the docker container is running. To do this, run "docker exec -it c-plus-plus-docker-ok-api-1 bash". Once you get the new shell, type 'cat /etc/os-release'. To get out of the bash shell inside your container, type "exit".</p>
       <p>Install and run another docker sample.</p>
